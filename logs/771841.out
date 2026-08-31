@@ -1,0 +1,280 @@
+========================================
+Config      : configs/config.yaml
+Model       : MultiScaleDUALFloodGNN
+Model Path  : saved_models/MultiScaleDUALFloodGNN_2026-08-29_16-13-00.pt
+========================================
+===== NODE INFO =====
+xgph12
+Sun Aug 30 02:03:07 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.173.02             Driver Version: 580.173.02     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          Off |   00000000:98:00.0 Off |                   On |
+| N/A   49C    P0             48W /  300W |     213MiB /  81920MiB |     N/A      Default |
+|                                         |                        |              Enabled |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| MIG devices:                                                                            |
++------------------+----------------------------------+-----------+-----------------------+
+| GPU  GI  CI  MIG |              Shared Memory-Usage |        Vol|        Shared         |
+|      ID  ID  Dev |                Shared BAR1-Usage | SM     Unc| CE ENC  DEC  OFA  JPG |
+|                  |                                  |        ECC|                       |
+|==================+==================================+===========+=======================|
+|  0    1   0   0  |             107MiB / 40192MiB    | 42      0 |  3   0    2    0    0 |
+|                  |               0MiB / 24543MiB    |           |                       |
++------------------+----------------------------------+-----------+-----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+===== CUDA CHECK =====
+Torch: 2.11.0+cu128
+CUDA available: True
+CUDA device count: 1
+GPU: NVIDIA A100 80GB PCIe MIG 3g.40gb
+PyTorch Geometric: 2.8.0
+===== START TESTING =====
+
+============================================================
+EDGE DIRECTION STATS - Scale 0 (Fine)
+============================================================
+edge_index shape   : (2, 2473)
+Number of edges    : 2473
+Reverse edges      : 0
+Reverse-edge ratio : 0.0000
+
+First 10 edges:
+  0:    10 ->    11 | reverse=False
+  1:    10 ->    24 | reverse=False
+  2:    11 ->    25 | reverse=False
+  3:    11 ->    12 | reverse=False
+  4:   189 ->   188 | reverse=False
+  5:   189 ->   206 | reverse=False
+  6:   189 ->   190 | reverse=False
+  7:   189 ->   171 | reverse=False
+  8:   188 ->   170 | reverse=False
+  9:   188 ->   187 | reverse=False
+============================================================
+
+============================================================
+EDGE DIRECTION STATS - Scale 1
+============================================================
+edge_index shape   : (2, 1094)
+Number of edges    : 1094
+Reverse edges      : 438
+Reverse-edge ratio : 0.4004
+
+First 10 edges:
+  0:     5 ->     8 | reverse=True
+  1:    54 ->    49 | reverse=False
+  2:    54 ->    44 | reverse=True
+  3:    49 ->    59 | reverse=False
+  4:    54 ->    59 | reverse=False
+  5:    51 ->    57 | reverse=False
+  6:    51 ->    46 | reverse=False
+  7:   189 ->   260 | reverse=True
+  8:   189 ->   190 | reverse=False
+  9:   189 ->   309 | reverse=True
+============================================================
+
+======================================================================
+COARSENING DIAGNOSTIC: scale 0 -> 1
+======================================================================
+Input nodes: 1129
+Coarse nodes: 326
+Input directed edges: 2473
+Internal edges removed: 923
+Crossing input edges: 1550
+Unique directed coarse edges: 1094
+Directed coarse edges with opposite counterpart: 438
+Bidirectional cluster pairs: 219
+Coarse reverse-edge ratio: 0.40036563071297987
+Crossing edges per directed coarse edge (min/mean/max): 1/1.42/5
+
+Examples of opposite cluster-level directions:
+
+Clusters 1 <-> 2
+  1->2 pools 1 input edge(s):
+      fine edge 55: 2->3
+  2->1 pools 1 input edge(s):
+      fine edge 63: 16->15
+
+Clusters 1 <-> 256
+  1->256 pools 1 input edge(s):
+      fine edge 70: 15->1120
+  256->1 pools 1 input edge(s):
+      fine edge 2408: 1120->1121
+
+Clusters 1 <-> 260
+  1->260 pools 2 input edge(s):
+      fine edge 50: 1->1123
+      fine edge 51: 1->1122
+  260->1 pools 1 input edge(s):
+      fine edge 2423: 1122->1121
+
+Clusters 3 <-> 4
+  3->4 pools 1 input edge(s):
+      fine edge 92: 8->21
+  4->3 pools 1 input edge(s):
+      fine edge 80: 9->8
+
+Clusters 3 <-> 7
+  3->7 pools 2 input edge(s):
+      fine edge 72: 7->20
+      fine edge 94: 19->32
+  7->3 pools 1 input edge(s):
+      fine edge 75: 20->19
+
+Clusters 4 <-> 7
+  4->7 pools 1 input edge(s):
+      fine edge 131: 21->34
+  7->4 pools 1 input edge(s):
+      fine edge 77: 20->21
+
+Clusters 5 <-> 8
+  5->8 pools 2 input edge(s):
+      fine edge 2: 11->25
+      fine edge 56: 12->26
+  8->5 pools 1 input edge(s):
+      fine edge 87: 25->24
+
+Clusters 8 <-> 12
+  8->12 pools 2 input edge(s):
+      fine edge 59: 26->40
+      fine edge 117: 27->41
+  12->8 pools 1 input edge(s):
+      fine edge 89: 40->39
+
+Clusters 12 <-> 16
+  12->16 pools 1 input edge(s):
+      fine edge 194: 55->70
+  16->12 pools 1 input edge(s):
+      fine edge 185: 54->55
+
+Clusters 13 <-> 17
+  13->17 pools 1 input edge(s):
+      fine edge 227: 59->73
+  17->13 pools 1 input edge(s):
+      fine edge 183: 58->59
+======================================================================
+
+============================================================
+EDGE DIRECTION STATS - Scale 2
+============================================================
+edge_index shape   : (2, 397)
+Number of edges    : 397
+Reverse edges      : 264
+Reverse-edge ratio : 0.6650
+
+First 10 edges:
+  0:    15 ->    19 | reverse=False
+  1:    16 ->    13 | reverse=True
+  2:    68 ->    98 | reverse=True
+  3:     1 ->     2 | reverse=False
+  4:     1 ->    68 | reverse=True
+  5:     0 ->     4 | reverse=True
+  6:     1 ->     6 | reverse=True
+  7:     2 ->     3 | reverse=False
+  8:     4 ->     0 | reverse=True
+  9:     5 ->    98 | reverse=True
+============================================================
+
+======================================================================
+COARSENING DIAGNOSTIC: scale 1 -> 2
+======================================================================
+Input nodes: 326
+Coarse nodes: 111
+Input directed edges: 1094
+Internal edges removed: 411
+Crossing input edges: 683
+Unique directed coarse edges: 397
+Directed coarse edges with opposite counterpart: 264
+Bidirectional cluster pairs: 132
+Coarse reverse-edge ratio: 0.6649874055415617
+Crossing edges per directed coarse edge (min/mean/max): 1/1.72/5
+
+Examples of opposite cluster-level directions:
+
+Clusters 0 <-> 4
+  0->4 pools 3 input edge(s):
+      fine edge 21: 8->12
+      fine edge 44: 5->11
+      fine edge 65: 8->16
+  4->0 pools 3 input edge(s):
+      fine edge 64: 11->8
+
+Clusters 1 <-> 6
+  1->6 pools 1 input edge(s):
+      fine edge 24: 2->255
+  6->1 pools 1 input edge(s):
+      fine edge 1068: 255->256
+
+Clusters 1 <-> 67
+  1->67 pools 1 input edge(s):
+      fine edge 977: 257->187
+  67->1 pools 3 input edge(s):
+      fine edge 987: 258->257
+
+Clusters 1 <-> 68
+  1->68 pools 3 input edge(s):
+      fine edge 18: 1->260
+      fine edge 1070: 257->260
+      fine edge 1071: 257->259
+  68->1 pools 1 input edge(s):
+      fine edge 1073: 260->1
+
+Clusters 3 <-> 6
+  3->6 pools 2 input edge(s):
+      fine edge 100: 15->23
+      fine edge 132: 18->23
+  6->3 pools 3 input edge(s):
+      fine edge 149: 23->19
+
+Clusters 4 <-> 7
+  4->7 pools 3 input edge(s):
+      fine edge 91: 12->21
+      fine edge 111: 20->24
+      fine edge 114: 16->21
+  7->4 pools 3 input edge(s):
+      fine edge 69: 24->20
+
+Clusters 5 <-> 9
+  5->9 pools 1 input edge(s):
+      fine edge 966: 22->26
+  9->5 pools 1 input edge(s):
+      fine edge 930: 26->22
+
+Clusters 5 <-> 60
+  5->60 pools 2 input edge(s):
+      fine edge 129: 17->169
+      fine edge 917: 22->170
+  60->5 pools 1 input edge(s):
+      fine edge 158: 169->22
+
+Clusters 5 <-> 67
+  5->67 pools 3 input edge(s):
+      fine edge 42: 13->307
+      fine edge 106: 22->307
+      fine edge 984: 188->187
+  67->5 pools 1 input edge(s):
+      fine edge 988: 258->188
+
+Clusters 5 <-> 68
+  5->68 pools 2 input edge(s):
+      fine edge 982: 188->259
+      fine edge 983: 188->189
+  68->5 pools 1 input edge(s):
+      fine edge 985: 259->188
+======================================================================
+========================================
+Testing completed successfully.
+========================================

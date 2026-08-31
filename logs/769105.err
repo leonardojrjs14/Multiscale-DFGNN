@@ -1,0 +1,1824 @@
+================================================
+Setting random seed to 42
+Using device: NVIDIA A100 80GB PCIe MIG 3g.40gb
+Splitting dataset into training and validation sets with 10.0% for validation
+Using training dataset configuration: {'mode': 'train', 'dataset_summary_file': 'train_split/train_split.csv', 'event_stats_file': 'train_train_event_stats.yaml', 'root_dir': '/home/i/i0002673/projects/dual_flood_gnn-master/data/datasets', 'nodes_shp_file': 'GEOMETRY/cell_centers_with_ele.shp', 'edges_shp_file': 'GEOMETRY/links_with_slope.shp', 'dem_file': 'GEOMETRY/DEM.tif', 'features_stats_file': 'features_stats.yaml', 'previous_timesteps': 1, 'normalize': True, 'timestep_interval': 900, 'spin_up_time': 259200, 'time_from_peak': None, 'inflow_boundary_nodes': [1248], 'outflow_boundary_nodes': [1253, 1129], 'with_global_mass_loss': True, 'with_local_mass_loss': True, 'debug': False, 'logger': <utils.logger.Logger object at 0x729ec681c5c0>, 'force_reload': True, 'num_label_timesteps': 6}
+Processing Flood Event Dataset...
+Saved constant values to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/constant_values.npz
+Saved dynamic values for event 17 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_17.npz
+Saved dynamic values for event 18 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_18.npz
+Saved dynamic values for event 19 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_19.npz
+Saved dynamic values for event 20 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_20.npz
+Saved dynamic values for event 21 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_21.npz
+Saved dynamic values for event 22 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_22.npz
+Saved dynamic values for event 23 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_23.npz
+Saved dynamic values for event 24 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_24.npz
+Saved dynamic values for event 25 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_25.npz
+Saved dynamic values for event 26 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_26.npz
+Saved dynamic values for event 27 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_27.npz
+Saved dynamic values for event 28 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_28.npz
+Saved dynamic values for event 29 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_29.npz
+Saved dynamic values for event 30 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_30.npz
+Saved dynamic values for event 31 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_31.npz
+Saved dynamic values for event 32 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_32.npz
+Saved dynamic values for event 33 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_33.npz
+Saved dynamic values for event 34 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_34.npz
+Saved dynamic values for event 35 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_35.npz
+Saved dynamic values for event 36 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_36.npz
+Saved dynamic values for event 37 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_37.npz
+Saved dynamic values for event 42 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_42.npz
+Saved dynamic values for event 43 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_43.npz
+Saved dynamic values for event 44 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_44.npz
+Saved dynamic values for event 45 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_45.npz
+Saved dynamic values for event 46 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_46.npz
+Saved dynamic values for event 47 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_47.npz
+Saved dynamic values for event 48 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_48.npz
+Saved dynamic values for event 49 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_49.npz
+Saved dynamic values for event 50 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_50.npz
+Saved dynamic values for event 51 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_51.npz
+Saved dynamic values for event 52 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_52.npz
+Saved dynamic values for event 53 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_53.npz
+Saved dynamic values for event 54 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_54.npz
+Saved dynamic values for event 55 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_55.npz
+Saved dynamic values for event 56 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_56.npz
+Saved dynamic values for event 57 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_57.npz
+Saved dynamic values for event 58 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_58.npz
+Saved dynamic values for event 59 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_59.npz
+Saved dynamic values for event 60 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_60.npz
+Saved dynamic values for event 61 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_61.npz
+Saved dynamic values for event 62 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_62.npz
+Saved dynamic values for event 63 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_63.npz
+Saved dynamic values for event 64 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_64.npz
+Saved dynamic values for event 65 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_65.npz
+Saved dynamic values for event 66 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_66.npz
+Saved dynamic values for event 67 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_67.npz
+Saved event stats to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/train_train_event_stats.yaml
+Saved feature stats to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/features_stats.yaml
+Saved boundary condition info to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/boundary_condition_masks.npz
+open file: /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/pre_transform.pt
+open file: /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/pre_filter.pt
+Processing timesteps:   0%|          | 0/26743 [00:00<?, ?it/s]Processing timesteps:   0%|          | 72/26743 [00:00<00:37, 712.46it/s]Processing timesteps:   1%|          | 158/26743 [00:00<00:33, 798.50it/s]Processing timesteps:   1%|          | 245/26743 [00:00<00:32, 827.03it/s]Processing timesteps:   1%|          | 331/26743 [00:00<00:31, 836.38it/s]Processing timesteps:   2%|▏         | 417/26743 [00:00<00:31, 844.42it/s]Processing timesteps:   2%|▏         | 503/26743 [00:00<00:30, 848.75it/s]Processing timesteps:   2%|▏         | 588/26743 [00:00<00:32, 805.52it/s]Processing timesteps:   3%|▎         | 673/26743 [00:00<00:31, 817.27it/s]Processing timesteps:   3%|▎         | 759/26743 [00:00<00:31, 828.13it/s]Processing timesteps:   3%|▎         | 844/26743 [00:01<00:31, 832.41it/s]Processing timesteps:   3%|▎         | 930/26743 [00:01<00:30, 837.96it/s]Processing timesteps:   4%|▍         | 1015/26743 [00:01<00:30, 839.24it/s]Processing timesteps:   4%|▍         | 1100/26743 [00:01<00:30, 840.97it/s]Processing timesteps:   4%|▍         | 1185/26743 [00:01<00:31, 803.81it/s]Processing timesteps:   5%|▍         | 1270/26743 [00:01<00:31, 816.57it/s]Processing timesteps:   5%|▌         | 1356/26743 [00:01<00:30, 826.82it/s]Processing timesteps:   5%|▌         | 1439/26743 [00:01<00:31, 805.35it/s]Processing timesteps:   6%|▌         | 1520/26743 [00:01<00:32, 784.05it/s]Processing timesteps:   6%|▌         | 1599/26743 [00:01<00:32, 769.68it/s]Processing timesteps:   6%|▋         | 1677/26743 [00:02<00:32, 761.08it/s]Processing timesteps:   7%|▋         | 1754/26743 [00:02<00:34, 715.73it/s]Processing timesteps:   7%|▋         | 1828/26743 [00:02<00:34, 722.39it/s]Processing timesteps:   7%|▋         | 1904/26743 [00:02<00:33, 732.04it/s]Processing timesteps:   7%|▋         | 1980/26743 [00:02<00:33, 737.47it/s]Processing timesteps:   8%|▊         | 2056/26743 [00:02<00:33, 742.25it/s]Processing timesteps:   8%|▊         | 2132/26743 [00:02<00:33, 745.46it/s]Processing timesteps:   8%|▊         | 2207/26743 [00:02<00:32, 745.82it/s]Processing timesteps:   9%|▊         | 2282/26743 [00:03<00:52, 466.74it/s]Processing timesteps:   9%|▉         | 2358/26743 [00:03<00:46, 526.77it/s]Processing timesteps:   9%|▉         | 2434/26743 [00:03<00:41, 578.92it/s]Processing timesteps:   9%|▉         | 2510/26743 [00:03<00:38, 622.16it/s]Processing timesteps:  10%|▉         | 2585/26743 [00:03<00:36, 655.08it/s]Processing timesteps:  10%|▉         | 2661/26743 [00:03<00:35, 682.46it/s]Processing timesteps:  10%|█         | 2736/26743 [00:03<00:34, 700.03it/s]Processing timesteps:  11%|█         | 2814/26743 [00:03<00:33, 720.21it/s]Processing timesteps:  11%|█         | 2889/26743 [00:03<00:34, 693.44it/s]Processing timesteps:  11%|█         | 2966/26743 [00:04<00:33, 713.32it/s]Processing timesteps:  11%|█▏        | 3043/26743 [00:04<00:32, 727.50it/s]Processing timesteps:  12%|█▏        | 3120/26743 [00:04<00:31, 738.23it/s]Processing timesteps:  12%|█▏        | 3196/26743 [00:04<00:31, 742.70it/s]Processing timesteps:  12%|█▏        | 3273/26743 [00:04<00:31, 749.70it/s]Processing timesteps:  13%|█▎        | 3350/26743 [00:04<00:30, 754.97it/s]Processing timesteps:  13%|█▎        | 3426/26743 [00:04<00:32, 721.99it/s]Processing timesteps:  13%|█▎        | 3505/26743 [00:04<00:31, 741.11it/s]Processing timesteps:  13%|█▎        | 3584/26743 [00:04<00:30, 755.11it/s]Processing timesteps:  14%|█▎        | 3662/26743 [00:04<00:30, 760.12it/s]Processing timesteps:  14%|█▍        | 3741/26743 [00:05<00:30, 766.67it/s]Processing timesteps:  14%|█▍        | 3820/26743 [00:05<00:29, 771.91it/s]Processing timesteps:  15%|█▍        | 3899/26743 [00:05<00:29, 776.29it/s]Processing timesteps:  15%|█▍        | 3978/26743 [00:05<00:29, 777.84it/s]Processing timesteps:  15%|█▌        | 4056/26743 [00:05<00:30, 739.94it/s]Processing timesteps:  15%|█▌        | 4134/26743 [00:05<00:30, 748.94it/s]Processing timesteps:  16%|█▌        | 4214/26743 [00:05<00:29, 761.64it/s]Processing timesteps:  16%|█▌        | 4294/26743 [00:05<00:29, 771.50it/s]Processing timesteps:  16%|█▋        | 4373/26743 [00:05<00:28, 776.53it/s]Processing timesteps:  17%|█▋        | 4453/26743 [00:05<00:28, 781.78it/s]Processing timesteps:  17%|█▋        | 4532/26743 [00:06<00:28, 778.65it/s]Processing timesteps:  17%|█▋        | 4610/26743 [00:06<00:29, 740.84it/s]Processing timesteps:  18%|█▊        | 4691/26743 [00:06<00:29, 760.20it/s]Processing timesteps:  18%|█▊        | 4784/26743 [00:06<00:27, 808.91it/s]Processing timesteps:  18%|█▊        | 4884/26743 [00:06<00:25, 862.39it/s]Processing timesteps:  19%|█▊        | 4985/26743 [00:06<00:24, 903.85it/s]Processing timesteps:  19%|█▉        | 5084/26743 [00:06<00:23, 927.25it/s]Processing timesteps:  19%|█▉        | 5177/26743 [00:06<00:23, 924.44it/s]Processing timesteps:  20%|█▉        | 5277/26743 [00:06<00:22, 945.56it/s]Processing timesteps:  20%|██        | 5374/26743 [00:07<00:22, 951.77it/s]Processing timesteps:  20%|██        | 5471/26743 [00:07<00:22, 956.48it/s]Processing timesteps:  21%|██        | 5570/26743 [00:07<00:21, 966.45it/s]Processing timesteps:  21%|██        | 5670/26743 [00:07<00:21, 974.37it/s]Processing timesteps:  22%|██▏       | 5768/26743 [00:07<00:22, 949.23it/s]Processing timesteps:  22%|██▏       | 5868/26743 [00:07<00:21, 962.52it/s]Processing timesteps:  22%|██▏       | 5965/26743 [00:07<00:21, 964.66it/s]Processing timesteps:  23%|██▎       | 6063/26743 [00:07<00:21, 968.95it/s]Processing timesteps:  23%|██▎       | 6161/26743 [00:07<00:21, 971.33it/s]Processing timesteps:  23%|██▎       | 6259/26743 [00:07<00:21, 968.37it/s]Processing timesteps:  24%|██▍       | 6356/26743 [00:08<00:21, 940.92it/s]Processing timesteps:  24%|██▍       | 6453/26743 [00:08<00:21, 948.85it/s]Processing timesteps:  24%|██▍       | 6551/26743 [00:08<00:21, 957.10it/s]Processing timesteps:  25%|██▍       | 6650/26743 [00:08<00:20, 964.61it/s]Processing timesteps:  25%|██▌       | 6749/26743 [00:08<00:20, 970.40it/s]Processing timesteps:  26%|██▌       | 6847/26743 [00:08<00:21, 944.89it/s]Processing timesteps:  26%|██▌       | 6945/26743 [00:08<00:20, 952.51it/s]Processing timesteps:  26%|██▋       | 7045/26743 [00:08<00:20, 964.88it/s]Processing timesteps:  27%|██▋       | 7143/26743 [00:08<00:20, 968.75it/s]Processing timesteps:  27%|██▋       | 7242/26743 [00:08<00:20, 972.99it/s]Processing timesteps:  27%|██▋       | 7340/26743 [00:09<00:20, 969.09it/s]Processing timesteps:  28%|██▊       | 7437/26743 [00:09<00:20, 944.31it/s]Processing timesteps:  28%|██▊       | 7535/26743 [00:09<00:20, 953.33it/s]Processing timesteps:  29%|██▊       | 7633/26743 [00:09<00:19, 959.17it/s]Processing timesteps:  29%|██▉       | 7731/26743 [00:09<00:19, 964.73it/s]Processing timesteps:  29%|██▉       | 7829/26743 [00:09<00:19, 967.08it/s]Processing timesteps:  30%|██▉       | 7926/26743 [00:09<00:26, 697.60it/s]Processing timesteps:  30%|██▉       | 8015/26743 [00:09<00:25, 741.02it/s]Processing timesteps:  30%|███       | 8114/26743 [00:09<00:23, 801.62it/s]Processing timesteps:  31%|███       | 8214/26743 [00:10<00:21, 852.85it/s]Processing timesteps:  31%|███       | 8312/26743 [00:10<00:20, 886.15it/s]Processing timesteps:  31%|███▏      | 8410/26743 [00:10<00:20, 909.96it/s]Processing timesteps:  32%|███▏      | 8509/26743 [00:10<00:19, 932.46it/s]Processing timesteps:  32%|███▏      | 8605/26743 [00:10<00:19, 925.02it/s]Processing timesteps:  33%|███▎      | 8703/26743 [00:10<00:19, 940.86it/s]Processing timesteps:  33%|███▎      | 8799/26743 [00:10<00:19, 939.18it/s]Processing timesteps:  33%|███▎      | 8894/26743 [00:10<00:19, 938.16it/s]Processing timesteps:  34%|███▎      | 8989/26743 [00:10<00:18, 936.37it/s]Processing timesteps:  34%|███▍      | 9084/26743 [00:11<00:18, 930.73it/s]Processing timesteps:  34%|███▍      | 9178/26743 [00:11<00:19, 904.13it/s]Processing timesteps:  35%|███▍      | 9272/26743 [00:11<00:19, 913.71it/s]Processing timesteps:  35%|███▌      | 9369/26743 [00:11<00:18, 928.76it/s]Processing timesteps:  35%|███▌      | 9465/26743 [00:11<00:18, 936.47it/s]Processing timesteps:  36%|███▌      | 9562/26743 [00:11<00:18, 943.74it/s]Processing timesteps:  36%|███▌      | 9659/26743 [00:11<00:17, 950.99it/s]Processing timesteps:  36%|███▋      | 9755/26743 [00:11<00:18, 928.60it/s]Processing timesteps:  37%|███▋      | 9849/26743 [00:11<00:18, 923.57it/s]Processing timesteps:  37%|███▋      | 9942/26743 [00:11<00:18, 914.40it/s]Processing timesteps:  38%|███▊      | 10034/26743 [00:12<00:18, 910.18it/s]Processing timesteps:  38%|███▊      | 10127/26743 [00:12<00:18, 915.53it/s]Processing timesteps:  38%|███▊      | 10219/26743 [00:12<00:18, 911.06it/s]Processing timesteps:  39%|███▊      | 10311/26743 [00:12<00:18, 883.69it/s]Processing timesteps:  39%|███▉      | 10404/26743 [00:12<00:18, 896.92it/s]Processing timesteps:  39%|███▉      | 10496/26743 [00:12<00:17, 902.88it/s]Processing timesteps:  40%|███▉      | 10589/26743 [00:12<00:17, 910.42it/s]Processing timesteps:  40%|███▉      | 10685/26743 [00:12<00:17, 923.36it/s]Processing timesteps:  40%|████      | 10778/26743 [00:12<00:17, 925.21it/s]Processing timesteps:  41%|████      | 10871/26743 [00:12<00:17, 890.34it/s]Processing timesteps:  41%|████      | 10964/26743 [00:13<00:17, 901.54it/s]Processing timesteps:  41%|████▏     | 11057/26743 [00:13<00:17, 909.41it/s]Processing timesteps:  42%|████▏     | 11150/26743 [00:13<00:17, 912.93it/s]Processing timesteps:  42%|████▏     | 11243/26743 [00:13<00:16, 915.55it/s]Processing timesteps:  42%|████▏     | 11335/26743 [00:13<00:16, 916.30it/s]Processing timesteps:  43%|████▎     | 11427/26743 [00:13<00:17, 892.74it/s]Processing timesteps:  43%|████▎     | 11520/26743 [00:13<00:16, 902.45it/s]Processing timesteps:  43%|████▎     | 11612/26743 [00:13<00:16, 906.32it/s]Processing timesteps:  44%|████▍     | 11705/26743 [00:13<00:16, 911.72it/s]Processing timesteps:  44%|████▍     | 11798/26743 [00:13<00:16, 916.94it/s]Processing timesteps:  44%|████▍     | 11890/26743 [00:14<00:16, 917.56it/s]Processing timesteps:  45%|████▍     | 11982/26743 [00:14<00:16, 892.54it/s]Processing timesteps:  45%|████▌     | 12074/26743 [00:14<00:16, 899.49it/s]Processing timesteps:  45%|████▌     | 12167/26743 [00:14<00:16, 908.08it/s]Processing timesteps:  46%|████▌     | 12259/26743 [00:14<00:15, 911.51it/s]Processing timesteps:  46%|████▌     | 12352/26743 [00:14<00:15, 914.73it/s]Processing timesteps:  47%|████▋     | 12446/26743 [00:14<00:15, 919.82it/s]Processing timesteps:  47%|████▋     | 12539/26743 [00:14<00:15, 894.24it/s]Processing timesteps:  47%|████▋     | 12631/26743 [00:14<00:15, 900.91it/s]Processing timesteps:  48%|████▊     | 12723/26743 [00:14<00:15, 905.76it/s]Processing timesteps:  48%|████▊     | 12817/26743 [00:15<00:15, 915.74it/s]Processing timesteps:  48%|████▊     | 12910/26743 [00:15<00:15, 918.11it/s]Processing timesteps:  49%|████▊     | 13002/26743 [00:15<00:14, 916.55it/s]Processing timesteps:  49%|████▉     | 13094/26743 [00:15<00:15, 891.64it/s]Processing timesteps:  49%|████▉     | 13188/26743 [00:15<00:14, 903.81it/s]Processing timesteps:  50%|████▉     | 13282/26743 [00:15<00:14, 912.89it/s]Processing timesteps:  50%|█████     | 13375/26743 [00:15<00:14, 916.52it/s]Processing timesteps:  50%|█████     | 13468/26743 [00:15<00:14, 919.09it/s]Processing timesteps:  51%|█████     | 13562/26743 [00:15<00:14, 922.78it/s]Processing timesteps:  51%|█████     | 13655/26743 [00:16<00:14, 923.99it/s]Processing timesteps:  51%|█████▏    | 13748/26743 [00:16<00:14, 887.60it/s]Processing timesteps:  52%|█████▏    | 13841/26743 [00:16<00:14, 897.28it/s]Processing timesteps:  52%|█████▏    | 13932/26743 [00:16<00:14, 898.67it/s]Processing timesteps:  52%|█████▏    | 14025/26743 [00:16<00:14, 906.83it/s]Processing timesteps:  53%|█████▎    | 14119/26743 [00:16<00:13, 914.40it/s]Processing timesteps:  53%|█████▎    | 14212/26743 [00:16<00:13, 916.42it/s]Processing timesteps:  53%|█████▎    | 14304/26743 [00:16<00:13, 889.65it/s]Processing timesteps:  54%|█████▍    | 14396/26743 [00:16<00:13, 896.03it/s]Processing timesteps:  54%|█████▍    | 14492/26743 [00:16<00:13, 912.74it/s]Processing timesteps:  55%|█████▍    | 14587/26743 [00:17<00:13, 922.65it/s]Processing timesteps:  55%|█████▍    | 14680/26743 [00:17<00:13, 924.49it/s]Processing timesteps:  55%|█████▌    | 14773/26743 [00:17<00:12, 922.23it/s]Processing timesteps:  56%|█████▌    | 14866/26743 [00:17<00:19, 597.73it/s]Processing timesteps:  56%|█████▌    | 14960/26743 [00:17<00:17, 669.95it/s]Processing timesteps:  56%|█████▋    | 15052/26743 [00:17<00:16, 728.55it/s]Processing timesteps:  57%|█████▋    | 15144/26743 [00:17<00:14, 776.58it/s]Processing timesteps:  57%|█████▋    | 15237/26743 [00:17<00:14, 815.57it/s]Processing timesteps:  57%|█████▋    | 15329/26743 [00:18<00:13, 843.31it/s]Processing timesteps:  58%|█████▊    | 15419/26743 [00:18<00:13, 837.81it/s]Processing timesteps:  58%|█████▊    | 15510/26743 [00:18<00:13, 857.32it/s]Processing timesteps:  58%|█████▊    | 15603/26743 [00:18<00:12, 875.41it/s]Processing timesteps:  59%|█████▊    | 15696/26743 [00:18<00:12, 889.20it/s]Processing timesteps:  59%|█████▉    | 15787/26743 [00:18<00:12, 894.79it/s]Processing timesteps:  59%|█████▉    | 15879/26743 [00:18<00:12, 901.37it/s]Processing timesteps:  60%|█████▉    | 15970/26743 [00:18<00:12, 878.45it/s]Processing timesteps:  60%|██████    | 16063/26743 [00:18<00:11, 891.41it/s]Processing timesteps:  60%|██████    | 16158/26743 [00:18<00:11, 905.78it/s]Processing timesteps:  61%|██████    | 16251/26743 [00:19<00:11, 911.03it/s]Processing timesteps:  61%|██████    | 16344/26743 [00:19<00:11, 915.28it/s]Processing timesteps:  61%|██████▏   | 16436/26743 [00:19<00:11, 915.92it/s]Processing timesteps:  62%|██████▏   | 16528/26743 [00:19<00:11, 891.37it/s]Processing timesteps:  62%|██████▏   | 16622/26743 [00:19<00:11, 903.67it/s]Processing timesteps:  62%|██████▏   | 16714/26743 [00:19<00:11, 908.32it/s]Processing timesteps:  63%|██████▎   | 16807/26743 [00:19<00:10, 912.29it/s]Processing timesteps:  63%|██████▎   | 16901/26743 [00:19<00:10, 917.98it/s]Processing timesteps:  64%|██████▎   | 16994/26743 [00:19<00:10, 918.84it/s]Processing timesteps:  64%|██████▍   | 17086/26743 [00:19<00:10, 891.70it/s]Processing timesteps:  64%|██████▍   | 17178/26743 [00:20<00:10, 899.82it/s]Processing timesteps:  65%|██████▍   | 17272/26743 [00:20<00:10, 908.82it/s]Processing timesteps:  65%|██████▍   | 17364/26743 [00:20<00:10, 910.17it/s]Processing timesteps:  65%|██████▌   | 17457/26743 [00:20<00:10, 913.68it/s]Processing timesteps:  66%|██████▌   | 17550/26743 [00:20<00:10, 917.74it/s]Processing timesteps:  66%|██████▌   | 17642/26743 [00:20<00:10, 883.80it/s]Processing timesteps:  66%|██████▋   | 17736/26743 [00:20<00:10, 898.04it/s]Processing timesteps:  67%|██████▋   | 17828/26743 [00:20<00:09, 903.68it/s]Processing timesteps:  67%|██████▋   | 17922/26743 [00:20<00:09, 912.06it/s]Processing timesteps:  67%|██████▋   | 18016/26743 [00:20<00:09, 917.69it/s]Processing timesteps:  68%|██████▊   | 18108/26743 [00:21<00:09, 917.50it/s]Processing timesteps:  68%|██████▊   | 18201/26743 [00:21<00:09, 920.96it/s]Processing timesteps:  68%|██████▊   | 18294/26743 [00:21<00:09, 892.86it/s]Processing timesteps:  69%|██████▉   | 18388/26743 [00:21<00:09, 903.97it/s]Processing timesteps:  69%|██████▉   | 18482/26743 [00:21<00:09, 913.71it/s]Processing timesteps:  69%|██████▉   | 18576/26743 [00:21<00:08, 919.28it/s]Processing timesteps:  70%|██████▉   | 18669/26743 [00:21<00:08, 919.52it/s]Processing timesteps:  70%|███████   | 18763/26743 [00:21<00:08, 923.13it/s]Processing timesteps:  71%|███████   | 18856/26743 [00:21<00:08, 892.91it/s]Processing timesteps:  71%|███████   | 18949/26743 [00:22<00:08, 903.66it/s]Processing timesteps:  71%|███████   | 19041/26743 [00:22<00:08, 907.63it/s]Processing timesteps:  72%|███████▏  | 19134/26743 [00:22<00:08, 912.02it/s]Processing timesteps:  72%|███████▏  | 19228/26743 [00:22<00:08, 918.02it/s]Processing timesteps:  72%|███████▏  | 19322/26743 [00:22<00:08, 923.49it/s]Processing timesteps:  73%|███████▎  | 19415/26743 [00:22<00:08, 894.39it/s]Processing timesteps:  73%|███████▎  | 19507/26743 [00:22<00:08, 901.14it/s]Processing timesteps:  73%|███████▎  | 19600/26743 [00:22<00:07, 909.03it/s]Processing timesteps:  74%|███████▎  | 19694/26743 [00:22<00:07, 916.80it/s]Processing timesteps:  74%|███████▍  | 19786/26743 [00:22<00:07, 915.68it/s]Processing timesteps:  74%|███████▍  | 19878/26743 [00:23<00:07, 915.87it/s]Processing timesteps:  75%|███████▍  | 19970/26743 [00:23<00:07, 887.24it/s]Processing timesteps:  75%|███████▌  | 20063/26743 [00:23<00:07, 897.49it/s]Processing timesteps:  75%|███████▌  | 20156/26743 [00:23<00:07, 905.92it/s]Processing timesteps:  76%|███████▌  | 20249/26743 [00:23<00:07, 912.49it/s]Processing timesteps:  76%|███████▌  | 20342/26743 [00:23<00:06, 917.23it/s]Processing timesteps:  76%|███████▋  | 20434/26743 [00:23<00:06, 917.46it/s]Processing timesteps:  77%|███████▋  | 20526/26743 [00:23<00:06, 891.05it/s]Processing timesteps:  77%|███████▋  | 20619/26743 [00:23<00:06, 900.38it/s]Processing timesteps:  77%|███████▋  | 20712/26743 [00:23<00:06, 907.93it/s]Processing timesteps:  78%|███████▊  | 20805/26743 [00:24<00:06, 913.02it/s]Processing timesteps:  78%|███████▊  | 20898/26743 [00:24<00:06, 916.87it/s]Processing timesteps:  78%|███████▊  | 20991/26743 [00:24<00:06, 919.05it/s]Processing timesteps:  79%|███████▉  | 21083/26743 [00:24<00:06, 893.68it/s]Processing timesteps:  79%|███████▉  | 21176/26743 [00:24<00:06, 902.07it/s]Processing timesteps:  80%|███████▉  | 21269/26743 [00:24<00:06, 907.88it/s]Processing timesteps:  80%|███████▉  | 21361/26743 [00:24<00:05, 908.98it/s]Processing timesteps:  80%|████████  | 21454/26743 [00:24<00:05, 912.88it/s]Processing timesteps:  81%|████████  | 21548/26743 [00:24<00:05, 918.47it/s]Processing timesteps:  81%|████████  | 21640/26743 [00:24<00:05, 890.84it/s]Processing timesteps:  81%|████████▏ | 21733/26743 [00:25<00:05, 900.44it/s]Processing timesteps:  82%|████████▏ | 21825/26743 [00:25<00:05, 905.72it/s]Processing timesteps:  82%|████████▏ | 21919/26743 [00:25<00:05, 913.17it/s]Processing timesteps:  82%|████████▏ | 22011/26743 [00:25<00:05, 913.98it/s]Processing timesteps:  83%|████████▎ | 22104/26743 [00:25<00:05, 918.10it/s]Processing timesteps:  83%|████████▎ | 22196/26743 [00:25<00:05, 889.65it/s]Processing timesteps:  83%|████████▎ | 22289/26743 [00:25<00:04, 900.19it/s]Processing timesteps:  84%|████████▎ | 22382/26743 [00:25<00:04, 908.93it/s]Processing timesteps:  84%|████████▍ | 22475/26743 [00:25<00:04, 913.14it/s]Processing timesteps:  84%|████████▍ | 22568/26743 [00:26<00:04, 917.53it/s]Processing timesteps:  85%|████████▍ | 22660/26743 [00:26<00:04, 917.61it/s]Processing timesteps:  85%|████████▌ | 22753/26743 [00:26<00:04, 920.02it/s]Processing timesteps:  85%|████████▌ | 22846/26743 [00:26<00:04, 891.06it/s]Processing timesteps:  86%|████████▌ | 22943/26743 [00:26<00:04, 913.03it/s]Processing timesteps:  86%|████████▌ | 23045/26743 [00:26<00:03, 942.38it/s]Processing timesteps:  87%|████████▋ | 23140/26743 [00:26<00:03, 940.95it/s]Processing timesteps:  87%|████████▋ | 23241/26743 [00:26<00:03, 959.31it/s]Processing timesteps:  87%|████████▋ | 23338/26743 [00:26<00:03, 940.63it/s]Processing timesteps:  88%|████████▊ | 23441/26743 [00:26<00:03, 966.27it/s]Processing timesteps:  88%|████████▊ | 23545/26743 [00:27<00:03, 985.91it/s]Processing timesteps:  88%|████████▊ | 23649/26743 [00:27<00:03, 1001.01it/s]Processing timesteps:  89%|████████▉ | 23750/26743 [00:27<00:04, 638.82it/s] Processing timesteps:  89%|████████▉ | 23845/26743 [00:27<00:04, 704.32it/s]Processing timesteps:  89%|████████▉ | 23930/26743 [00:27<00:03, 723.62it/s]Processing timesteps:  90%|████████▉ | 24023/26743 [00:27<00:03, 772.43it/s]Processing timesteps:  90%|█████████ | 24117/26743 [00:27<00:03, 813.94it/s]Processing timesteps:  91%|█████████ | 24209/26743 [00:27<00:03, 841.10it/s]Processing timesteps:  91%|█████████ | 24302/26743 [00:28<00:02, 864.62it/s]Processing timesteps:  91%|█████████ | 24395/26743 [00:28<00:02, 882.53it/s]Processing timesteps:  92%|█████████▏| 24486/26743 [00:28<00:02, 867.96it/s]Processing timesteps:  92%|█████████▏| 24579/26743 [00:28<00:02, 883.76it/s]Processing timesteps:  92%|█████████▏| 24671/26743 [00:28<00:02, 892.45it/s]Processing timesteps:  93%|█████████▎| 24765/26743 [00:28<00:02, 904.85it/s]Processing timesteps:  93%|█████████▎| 24858/26743 [00:28<00:02, 912.07it/s]Processing timesteps:  93%|█████████▎| 24951/26743 [00:28<00:01, 916.36it/s]Processing timesteps:  94%|█████████▎| 25043/26743 [00:28<00:01, 876.61it/s]Processing timesteps:  94%|█████████▍| 25136/26743 [00:28<00:01, 890.96it/s]Processing timesteps:  94%|█████████▍| 25229/26743 [00:29<00:01, 902.03it/s]Processing timesteps:  95%|█████████▍| 25321/26743 [00:29<00:01, 906.86it/s]Processing timesteps:  95%|█████████▌| 25414/26743 [00:29<00:01, 910.50it/s]Processing timesteps:  95%|█████████▌| 25508/26743 [00:29<00:01, 916.50it/s]Processing timesteps:  96%|█████████▌| 25600/26743 [00:29<00:01, 915.46it/s]Processing timesteps:  96%|█████████▌| 25692/26743 [00:29<00:01, 884.00it/s]Processing timesteps:  96%|█████████▋| 25785/26743 [00:29<00:01, 895.83it/s]Processing timesteps:  97%|█████████▋| 25878/26743 [00:29<00:00, 905.28it/s]Processing timesteps:  97%|█████████▋| 25972/26743 [00:29<00:00, 913.28it/s]Processing timesteps:  97%|█████████▋| 26065/26743 [00:29<00:00, 916.02it/s]Processing timesteps:  98%|█████████▊| 26159/26743 [00:30<00:00, 921.05it/s]Processing timesteps:  98%|█████████▊| 26252/26743 [00:30<00:00, 887.56it/s]Processing timesteps:  99%|█████████▊| 26354/26743 [00:30<00:00, 925.75it/s]Processing timesteps:  99%|█████████▉| 26458/26743 [00:30<00:00, 957.21it/s]Processing timesteps:  99%|█████████▉| 26560/26743 [00:30<00:00, 975.51it/s]Processing timesteps: 100%|█████████▉| 26664/26743 [00:30<00:00, 994.02it/s]Processing timesteps: 100%|██████████| 26743/26743 [00:30<00:00, 871.68it/s]
+RAM usage after loading dataset: 24.40 GB
+Using validation dataset configuration: {'mode': 'test', 'dataset_summary_file': 'train_split/val_split.csv', 'event_stats_file': 'val_train_event_stats.yaml', 'root_dir': '/home/i/i0002673/projects/dual_flood_gnn-master/data/datasets', 'nodes_shp_file': 'GEOMETRY/cell_centers_with_ele.shp', 'edges_shp_file': 'GEOMETRY/links_with_slope.shp', 'dem_file': 'GEOMETRY/DEM.tif', 'features_stats_file': 'features_stats.yaml', 'previous_timesteps': 1, 'normalize': True, 'timestep_interval': 900, 'spin_up_time': 259200, 'time_from_peak': None, 'inflow_boundary_nodes': [1248], 'outflow_boundary_nodes': [1253, 1129], 'with_global_mass_loss': True, 'with_local_mass_loss': True, 'debug': False, 'logger': <utils.logger.Logger object at 0x729ec681c5c0>, 'force_reload': True}
+Processing Flood Event Dataset...
+Saved constant values to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/constant_values.npz
+Saved dynamic values for event 68 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_68.npz
+Saved dynamic values for event 69 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_69.npz
+Saved dynamic values for event 70 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_70.npz
+Saved dynamic values for event 71 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_71.npz
+Saved dynamic values for event 72 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_72.npz
+Saved event stats to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/val_train_event_stats.yaml
+Saved boundary condition info to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/boundary_condition_masks.npz
+open file: /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/pre_transform.pt
+open file: /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/pre_filter.pt
+Processing timesteps:   0%|          | 0/2870 [00:00<?, ?it/s]Processing timesteps:  10%|█         | 292/2870 [00:00<00:00, 2917.63it/s]Processing timesteps:  27%|██▋       | 775/2870 [00:00<00:00, 4039.63it/s]Processing timesteps:  43%|████▎     | 1247/2870 [00:00<00:00, 4347.51it/s]Processing timesteps:  60%|██████    | 1723/2870 [00:00<00:00, 4478.56it/s]Processing timesteps:  79%|███████▉  | 2266/2870 [00:00<00:00, 4818.27it/s]Processing timesteps:  96%|█████████▌| 2748/2870 [00:00<00:00, 4750.82it/s]Processing timesteps: 100%|██████████| 2870/2870 [00:00<00:00, 4569.37it/s]
+RAM usage after loading dataset: 24.79 GB
+Loaded train dataset with 26743 samples and validation dataset with 2870 samples
+Using model: MultiScaleDUALFloodGNN
+Using model configuration: {'hidden_features': 64, 'num_scales': 3, 'coarsening_factor': 4, 'layers_per_scale': 3, 'activation': 'relu', 'residual': True, 'mlp_layers': 3, 'skip_connections': True, 'encoder_layers': 3, 'encoder_activation': 'relu', 'decoder_layers': 3, 'decoder_activation': 'relu', 'static_node_features': 8, 'dynamic_node_features': 3, 'static_edge_features': 5, 'dynamic_edge_features': 1, 'previous_timesteps': 1, 'device': 'cuda'}
+Using multiscale hierarchy: {'num_scales': 3, 'nodes_per_scale': [1129, 326, 111], 'edges_per_scale': [2473, 1094, 397], 'coarsening_factor': 4}
+Number of trainable model parameters: 641408
+Using Adam optimizer with learning rate 0.0001 and weight decay 0
+Using dynamic loss weight adjustment for the first 0/300 epochs
+Applying importance weight of 1.0 to node prediction loss after scaling
+Using training configuration: {'num_epochs': 300, 'num_epochs_dyn_loss': 0, 'batch_size': 32, 'gradient_clip_value': 0.5, 'loss_func': MSELoss(), 'node_loss_weight': 1.0, 'early_stopping_patience': 15}
+Using global mass conservation loss with scale 1.13e-09 with importance weight 0.0005
+Using local mass conservation loss with scale 5.11e-10 with importance weight 0.1
+Using autoregressive training for 2/6 timesteps and curriculum learning with timestep increment 2, patience 15, max 100 epochs and learning rate decay 0.7
+Using edge prediction loss with scale 4.3 with importance weight 0.4
+Using MSELoss loss for edge prediction
+Epoch [1/300]
+	Loss: 1.9384e-04
+	Node Prediction Loss: 8.0278e-05
+	Edge Prediction Loss: 1.0928e-04
+	Global Physics Loss: 3.2773e-08
+	Local Physics Loss: 4.2515e-06
+	Epoch Train Duration: 90.27 seconds
+
+	Validation Node RMSE: 1.0343e+04
+	Validation Edge RMSE: 1.6257e+02
+Epoch [2/300]
+	Loss: 1.5278e-04
+	Node Prediction Loss: 6.4838e-05
+	Edge Prediction Loss: 8.2386e-05
+	Global Physics Loss: 2.6717e-08
+	Local Physics Loss: 5.5260e-06
+	Epoch Train Duration: 89.50 seconds
+
+	Validation Node RMSE: 7.6420e+03
+	Validation Edge RMSE: 7.6040e+01
+Epoch [3/300]
+	Loss: 5.6187e-05
+	Node Prediction Loss: 2.5811e-05
+	Edge Prediction Loss: 2.5589e-05
+	Global Physics Loss: 1.1732e-08
+	Local Physics Loss: 4.7752e-06
+	Epoch Train Duration: 96.21 seconds
+
+	Validation Node RMSE: 6.7796e+03
+	Validation Edge RMSE: 5.5312e+01
+Epoch [4/300]
+	Loss: 4.0086e-05
+	Node Prediction Loss: 1.7947e-05
+	Edge Prediction Loss: 1.8308e-05
+	Global Physics Loss: 9.5751e-09
+	Local Physics Loss: 3.8216e-06
+	Epoch Train Duration: 92.85 seconds
+
+	Validation Node RMSE: 5.8735e+03
+	Validation Edge RMSE: 4.9595e+01
+Epoch [5/300]
+	Loss: 3.3364e-05
+	Node Prediction Loss: 1.4574e-05
+	Edge Prediction Loss: 1.5372e-05
+	Global Physics Loss: 8.2076e-09
+	Local Physics Loss: 3.4097e-06
+	Epoch Train Duration: 90.43 seconds
+
+	Validation Node RMSE: 5.3355e+03
+	Validation Edge RMSE: 5.1279e+01
+Epoch [6/300]
+	Loss: 3.2997e-05
+	Node Prediction Loss: 1.3963e-05
+	Edge Prediction Loss: 1.5786e-05
+	Global Physics Loss: 8.9077e-09
+	Local Physics Loss: 3.2386e-06
+	Epoch Train Duration: 90.19 seconds
+
+	Validation Node RMSE: 4.6326e+03
+	Validation Edge RMSE: 4.5079e+01
+Epoch [7/300]
+	Loss: 2.8616e-05
+	Node Prediction Loss: 1.1873e-05
+	Edge Prediction Loss: 1.3728e-05
+	Global Physics Loss: 7.7534e-09
+	Local Physics Loss: 3.0064e-06
+	Epoch Train Duration: 90.46 seconds
+
+	Validation Node RMSE: 4.3053e+03
+	Validation Edge RMSE: 4.5297e+01
+Epoch [8/300]
+	Loss: 2.6218e-05
+	Node Prediction Loss: 1.0724e-05
+	Edge Prediction Loss: 1.2633e-05
+	Global Physics Loss: 7.4146e-09
+	Local Physics Loss: 2.8539e-06
+	Epoch Train Duration: 90.50 seconds
+
+	Validation Node RMSE: 4.0179e+03
+	Validation Edge RMSE: 4.2756e+01
+Epoch [9/300]
+	Loss: 2.6720e-05
+	Node Prediction Loss: 1.0773e-05
+	Edge Prediction Loss: 1.3139e-05
+	Global Physics Loss: 7.8010e-09
+	Local Physics Loss: 2.8000e-06
+	Epoch Train Duration: 90.38 seconds
+
+	Validation Node RMSE: 3.9740e+03
+	Validation Edge RMSE: 4.9056e+01
+Epoch [10/300]
+	Loss: 2.3606e-05
+	Node Prediction Loss: 9.4001e-06
+	Edge Prediction Loss: 1.1544e-05
+	Global Physics Loss: 6.8687e-09
+	Local Physics Loss: 2.6551e-06
+	Epoch Train Duration: 90.45 seconds
+
+	Validation Node RMSE: 3.7550e+03
+	Validation Edge RMSE: 4.1887e+01
+Epoch [11/300]
+	Loss: 2.5207e-05
+	Node Prediction Loss: 9.8723e-06
+	Edge Prediction Loss: 1.2681e-05
+	Global Physics Loss: 7.7525e-09
+	Local Physics Loss: 2.6464e-06
+	Epoch Train Duration: 90.34 seconds
+
+	Validation Node RMSE: 3.7005e+03
+	Validation Edge RMSE: 4.1089e+01
+Epoch [12/300]
+	Loss: 2.2746e-05
+	Node Prediction Loss: 8.8243e-06
+	Edge Prediction Loss: 1.1371e-05
+	Global Physics Loss: 7.0256e-09
+	Local Physics Loss: 2.5440e-06
+	Epoch Train Duration: 90.32 seconds
+
+	Validation Node RMSE: 3.5512e+03
+	Validation Edge RMSE: 4.0349e+01
+Epoch [13/300]
+	Loss: 2.3339e-05
+	Node Prediction Loss: 8.9515e-06
+	Edge Prediction Loss: 1.1858e-05
+	Global Physics Loss: 7.6307e-09
+	Local Physics Loss: 2.5218e-06
+	Epoch Train Duration: 90.46 seconds
+
+	Validation Node RMSE: 3.2160e+03
+	Validation Edge RMSE: 3.7957e+01
+Epoch [14/300]
+	Loss: 2.2206e-05
+	Node Prediction Loss: 8.4901e-06
+	Edge Prediction Loss: 1.1250e-05
+	Global Physics Loss: 7.1981e-09
+	Local Physics Loss: 2.4588e-06
+	Epoch Train Duration: 90.30 seconds
+
+	Validation Node RMSE: 3.2888e+03
+	Validation Edge RMSE: 3.7463e+01
+Epoch [15/300]
+	Loss: 2.0575e-05
+	Node Prediction Loss: 7.7839e-06
+	Edge Prediction Loss: 1.0398e-05
+	Global Physics Loss: 6.6223e-09
+	Local Physics Loss: 2.3864e-06
+	Epoch Train Duration: 90.38 seconds
+
+	Validation Node RMSE: 3.2669e+03
+	Validation Edge RMSE: 3.7682e+01
+Epoch [16/300]
+	Loss: 2.2542e-05
+	Node Prediction Loss: 8.5043e-06
+	Edge Prediction Loss: 1.1608e-05
+	Global Physics Loss: 7.5722e-09
+	Local Physics Loss: 2.4225e-06
+	Epoch Train Duration: 90.48 seconds
+
+	Validation Node RMSE: 3.3633e+03
+	Validation Edge RMSE: 3.9143e+01
+Epoch [17/300]
+	Loss: 2.0162e-05
+	Node Prediction Loss: 7.5223e-06
+	Edge Prediction Loss: 1.0314e-05
+	Global Physics Loss: 6.7228e-09
+	Local Physics Loss: 2.3184e-06
+	Epoch Train Duration: 90.55 seconds
+
+	Validation Node RMSE: 3.3741e+03
+	Validation Edge RMSE: 3.9175e+01
+Epoch [18/300]
+	Loss: 1.9825e-05
+	Node Prediction Loss: 7.3909e-06
+	Edge Prediction Loss: 1.0142e-05
+	Global Physics Loss: 6.6512e-09
+	Local Physics Loss: 2.2856e-06
+	Epoch Train Duration: 90.12 seconds
+
+	Validation Node RMSE: 2.9909e+03
+	Validation Edge RMSE: 3.3461e+01
+Epoch [19/300]
+	Loss: 2.1436e-05
+	Node Prediction Loss: 7.9726e-06
+	Edge Prediction Loss: 1.1147e-05
+	Global Physics Loss: 6.9600e-09
+	Local Physics Loss: 2.3098e-06
+	Epoch Train Duration: 95.32 seconds
+
+	Validation Node RMSE: 3.1150e+03
+	Validation Edge RMSE: 3.1279e+01
+Epoch [20/300]
+	Loss: 1.9253e-05
+	Node Prediction Loss: 7.1042e-06
+	Edge Prediction Loss: 9.9146e-06
+	Global Physics Loss: 6.5623e-09
+	Local Physics Loss: 2.2276e-06
+	Epoch Train Duration: 90.24 seconds
+
+	Validation Node RMSE: 2.8814e+03
+	Validation Edge RMSE: 3.1238e+01
+Epoch [21/300]
+	Loss: 1.8886e-05
+	Node Prediction Loss: 6.9269e-06
+	Edge Prediction Loss: 9.7503e-06
+	Global Physics Loss: 6.6408e-09
+	Local Physics Loss: 2.2023e-06
+	Epoch Train Duration: 89.47 seconds
+
+	Validation Node RMSE: 2.8740e+03
+	Validation Edge RMSE: 3.4949e+01
+Epoch [22/300]
+	Loss: 1.8539e-05
+	Node Prediction Loss: 6.7405e-06
+	Edge Prediction Loss: 9.6168e-06
+	Global Physics Loss: 6.4796e-09
+	Local Physics Loss: 2.1750e-06
+	Epoch Train Duration: 89.10 seconds
+
+	Validation Node RMSE: 2.7245e+03
+	Validation Edge RMSE: 2.9806e+01
+Epoch [23/300]
+	Loss: 1.8633e-05
+	Node Prediction Loss: 6.7785e-06
+	Edge Prediction Loss: 9.6846e-06
+	Global Physics Loss: 6.6773e-09
+	Local Physics Loss: 2.1628e-06
+	Epoch Train Duration: 88.89 seconds
+
+	Validation Node RMSE: 2.6767e+03
+	Validation Edge RMSE: 3.0628e+01
+Epoch [24/300]
+	Loss: 1.8525e-05
+	Node Prediction Loss: 6.7726e-06
+	Edge Prediction Loss: 9.5999e-06
+	Global Physics Loss: 6.7070e-09
+	Local Physics Loss: 2.1458e-06
+	Epoch Train Duration: 89.21 seconds
+
+	Validation Node RMSE: 2.7019e+03
+	Validation Edge RMSE: 3.2467e+01
+Epoch [25/300]
+	Loss: 1.8321e-05
+	Node Prediction Loss: 6.6104e-06
+	Edge Prediction Loss: 9.5753e-06
+	Global Physics Loss: 6.7010e-09
+	Local Physics Loss: 2.1280e-06
+	Epoch Train Duration: 89.05 seconds
+
+	Validation Node RMSE: 2.6676e+03
+	Validation Edge RMSE: 3.2175e+01
+Epoch [26/300]
+	Loss: 1.7989e-05
+	Node Prediction Loss: 6.4973e-06
+	Edge Prediction Loss: 9.3865e-06
+	Global Physics Loss: 6.5997e-09
+	Local Physics Loss: 2.0986e-06
+	Epoch Train Duration: 89.31 seconds
+
+	Validation Node RMSE: 2.6563e+03
+	Validation Edge RMSE: 3.7748e+01
+Epoch [27/300]
+	Loss: 1.7576e-05
+	Node Prediction Loss: 6.3108e-06
+	Edge Prediction Loss: 9.1872e-06
+	Global Physics Loss: 6.4201e-09
+	Local Physics Loss: 2.0715e-06
+	Epoch Train Duration: 89.03 seconds
+
+	Validation Node RMSE: 2.4905e+03
+	Validation Edge RMSE: 2.9325e+01
+Epoch [28/300]
+	Loss: 1.7005e-05
+	Node Prediction Loss: 6.0532e-06
+	Edge Prediction Loss: 8.8976e-06
+	Global Physics Loss: 6.4102e-09
+	Local Physics Loss: 2.0477e-06
+	Epoch Train Duration: 89.13 seconds
+
+	Validation Node RMSE: 2.5759e+03
+	Validation Edge RMSE: 3.4289e+01
+Epoch [29/300]
+	Loss: 1.7553e-05
+	Node Prediction Loss: 6.2773e-06
+	Edge Prediction Loss: 9.1970e-06
+	Global Physics Loss: 6.6874e-09
+	Local Physics Loss: 2.0721e-06
+	Epoch Train Duration: 88.87 seconds
+
+	Validation Node RMSE: 2.4512e+03
+	Validation Edge RMSE: 2.9317e+01
+Epoch [30/300]
+	Loss: 1.6526e-05
+	Node Prediction Loss: 5.8557e-06
+	Edge Prediction Loss: 8.6504e-06
+	Global Physics Loss: 6.2218e-09
+	Local Physics Loss: 2.0136e-06
+	Epoch Train Duration: 88.84 seconds
+
+	Validation Node RMSE: 2.3153e+03
+	Validation Edge RMSE: 3.8449e+01
+Epoch [31/300]
+	Loss: 1.6749e-05
+	Node Prediction Loss: 5.9035e-06
+	Edge Prediction Loss: 8.8135e-06
+	Global Physics Loss: 6.4139e-09
+	Local Physics Loss: 2.0256e-06
+	Epoch Train Duration: 89.16 seconds
+
+	Validation Node RMSE: 2.3619e+03
+	Validation Edge RMSE: 3.4997e+01
+Epoch [32/300]
+	Loss: 1.6257e-05
+	Node Prediction Loss: 5.7243e-06
+	Edge Prediction Loss: 8.5432e-06
+	Global Physics Loss: 6.3124e-09
+	Local Physics Loss: 1.9832e-06
+	Epoch Train Duration: 89.20 seconds
+
+	Validation Node RMSE: 2.1995e+03
+	Validation Edge RMSE: 2.5283e+01
+Epoch [33/300]
+	Loss: 1.6758e-05
+	Node Prediction Loss: 5.9126e-06
+	Edge Prediction Loss: 8.8320e-06
+	Global Physics Loss: 6.6646e-09
+	Local Physics Loss: 2.0068e-06
+	Epoch Train Duration: 89.08 seconds
+
+	Validation Node RMSE: 2.2465e+03
+	Validation Edge RMSE: 3.2163e+01
+Epoch [34/300]
+	Loss: 1.6287e-05
+	Node Prediction Loss: 5.6749e-06
+	Edge Prediction Loss: 8.6317e-06
+	Global Physics Loss: 6.4854e-09
+	Local Physics Loss: 1.9738e-06
+	Epoch Train Duration: 89.24 seconds
+
+	Validation Node RMSE: 2.2344e+03
+	Validation Edge RMSE: 2.5543e+01
+Epoch [35/300]
+	Loss: 1.5422e-05
+	Node Prediction Loss: 5.3443e-06
+	Edge Prediction Loss: 8.1437e-06
+	Global Physics Loss: 6.0571e-09
+	Local Physics Loss: 1.9280e-06
+	Epoch Train Duration: 89.34 seconds
+
+	Validation Node RMSE: 2.1789e+03
+	Validation Edge RMSE: 2.5117e+01
+Epoch [36/300]
+	Loss: 1.5623e-05
+	Node Prediction Loss: 5.4420e-06
+	Edge Prediction Loss: 8.2370e-06
+	Global Physics Loss: 6.1982e-09
+	Local Physics Loss: 1.9374e-06
+	Epoch Train Duration: 89.19 seconds
+
+	Validation Node RMSE: 2.1388e+03
+	Validation Edge RMSE: 2.6817e+01
+Epoch [37/300]
+	Loss: 1.5720e-05
+	Node Prediction Loss: 5.4491e-06
+	Edge Prediction Loss: 8.3096e-06
+	Global Physics Loss: 6.2432e-09
+	Local Physics Loss: 1.9551e-06
+	Epoch Train Duration: 89.06 seconds
+
+	Validation Node RMSE: 2.1097e+03
+	Validation Edge RMSE: 2.6185e+01
+Epoch [38/300]
+	Loss: 1.5231e-05
+	Node Prediction Loss: 5.2479e-06
+	Edge Prediction Loss: 8.0666e-06
+	Global Physics Loss: 6.2350e-09
+	Local Physics Loss: 1.9103e-06
+	Epoch Train Duration: 89.08 seconds
+
+	Validation Node RMSE: 2.4741e+03
+	Validation Edge RMSE: 4.2863e+01
+Epoch [39/300]
+	Loss: 1.4656e-05
+	Node Prediction Loss: 5.0058e-06
+	Edge Prediction Loss: 7.7572e-06
+	Global Physics Loss: 5.9646e-09
+	Local Physics Loss: 1.8868e-06
+	Epoch Train Duration: 88.63 seconds
+
+	Validation Node RMSE: 2.1539e+03
+	Validation Edge RMSE: 2.3520e+01
+Epoch [40/300]
+	Loss: 1.5151e-05
+	Node Prediction Loss: 5.2049e-06
+	Edge Prediction Loss: 8.0416e-06
+	Global Physics Loss: 6.2767e-09
+	Local Physics Loss: 1.8978e-06
+	Epoch Train Duration: 88.59 seconds
+
+	Validation Node RMSE: 2.1272e+03
+	Validation Edge RMSE: 2.6195e+01
+Epoch [41/300]
+	Loss: 1.4350e-05
+	Node Prediction Loss: 4.8874e-06
+	Edge Prediction Loss: 7.5967e-06
+	Global Physics Loss: 5.9042e-09
+	Local Physics Loss: 1.8598e-06
+	Epoch Train Duration: 88.52 seconds
+
+	Validation Node RMSE: 2.0830e+03
+	Validation Edge RMSE: 2.4609e+01
+Epoch [42/300]
+	Loss: 1.5201e-05
+	Node Prediction Loss: 5.2110e-06
+	Edge Prediction Loss: 8.0807e-06
+	Global Physics Loss: 6.4549e-09
+	Local Physics Loss: 1.9025e-06
+	Epoch Train Duration: 88.59 seconds
+
+	Validation Node RMSE: 2.0691e+03
+	Validation Edge RMSE: 2.4897e+01
+Epoch [43/300]
+	Loss: 1.4613e-05
+	Node Prediction Loss: 4.9337e-06
+	Edge Prediction Loss: 7.8014e-06
+	Global Physics Loss: 6.1594e-09
+	Local Physics Loss: 1.8719e-06
+	Epoch Train Duration: 88.65 seconds
+
+	Validation Node RMSE: 1.9173e+03
+	Validation Edge RMSE: 2.2846e+01
+Epoch [44/300]
+	Loss: 1.4417e-05
+	Node Prediction Loss: 4.8806e-06
+	Edge Prediction Loss: 7.6618e-06
+	Global Physics Loss: 6.0022e-09
+	Local Physics Loss: 1.8682e-06
+	Epoch Train Duration: 88.57 seconds
+
+	Validation Node RMSE: 1.9313e+03
+	Validation Edge RMSE: 2.2843e+01
+Epoch [45/300]
+	Loss: 1.3901e-05
+	Node Prediction Loss: 4.6560e-06
+	Edge Prediction Loss: 7.4076e-06
+	Global Physics Loss: 5.8920e-09
+	Local Physics Loss: 1.8318e-06
+	Epoch Train Duration: 88.97 seconds
+
+	Validation Node RMSE: 1.9606e+03
+	Validation Edge RMSE: 2.7733e+01
+Epoch [46/300]
+	Loss: 1.4033e-05
+	Node Prediction Loss: 4.7034e-06
+	Edge Prediction Loss: 7.4654e-06
+	Global Physics Loss: 6.0100e-09
+	Local Physics Loss: 1.8582e-06
+	Epoch Train Duration: 88.64 seconds
+
+	Validation Node RMSE: 1.9426e+03
+	Validation Edge RMSE: 2.3039e+01
+Epoch [47/300]
+	Loss: 1.3986e-05
+	Node Prediction Loss: 4.6975e-06
+	Edge Prediction Loss: 7.4543e-06
+	Global Physics Loss: 6.0348e-09
+	Local Physics Loss: 1.8281e-06
+	Epoch Train Duration: 88.59 seconds
+
+	Validation Node RMSE: 2.2039e+03
+	Validation Edge RMSE: 3.9511e+01
+Epoch [48/300]
+	Loss: 1.4148e-05
+	Node Prediction Loss: 4.7061e-06
+	Edge Prediction Loss: 7.5937e-06
+	Global Physics Loss: 6.1792e-09
+	Local Physics Loss: 1.8418e-06
+	Epoch Train Duration: 89.16 seconds
+
+	Validation Node RMSE: 1.8675e+03
+	Validation Edge RMSE: 2.5877e+01
+Epoch [49/300]
+	Loss: 1.3107e-05
+	Node Prediction Loss: 4.3088e-06
+	Edge Prediction Loss: 6.9992e-06
+	Global Physics Loss: 5.7279e-09
+	Local Physics Loss: 1.7931e-06
+	Epoch Train Duration: 89.04 seconds
+
+	Validation Node RMSE: 1.8788e+03
+	Validation Edge RMSE: 2.2749e+01
+Epoch [50/300]
+	Loss: 1.3225e-05
+	Node Prediction Loss: 4.3797e-06
+	Edge Prediction Loss: 7.0311e-06
+	Global Physics Loss: 5.8099e-09
+	Local Physics Loss: 1.8083e-06
+	Epoch Train Duration: 89.13 seconds
+
+	Validation Node RMSE: 1.8864e+03
+	Validation Edge RMSE: 2.5091e+01
+Epoch [51/300]
+	Loss: 1.3382e-05
+	Node Prediction Loss: 4.3941e-06
+	Edge Prediction Loss: 7.1725e-06
+	Global Physics Loss: 5.9716e-09
+	Local Physics Loss: 1.8091e-06
+	Epoch Train Duration: 89.76 seconds
+
+	Validation Node RMSE: 2.0151e+03
+	Validation Edge RMSE: 3.2715e+01
+Epoch [52/300]
+	Loss: 1.3080e-05
+	Node Prediction Loss: 4.2652e-06
+	Edge Prediction Loss: 7.0235e-06
+	Global Physics Loss: 5.8798e-09
+	Local Physics Loss: 1.7854e-06
+	Epoch Train Duration: 88.87 seconds
+
+	Validation Node RMSE: 1.7732e+03
+	Validation Edge RMSE: 2.3456e+01
+Epoch [53/300]
+	Loss: 1.3420e-05
+	Node Prediction Loss: 4.3883e-06
+	Edge Prediction Loss: 7.2126e-06
+	Global Physics Loss: 6.0738e-09
+	Local Physics Loss: 1.8127e-06
+	Epoch Train Duration: 88.84 seconds
+
+	Validation Node RMSE: 1.7773e+03
+	Validation Edge RMSE: 2.0987e+01
+Epoch [54/300]
+	Loss: 1.2396e-05
+	Node Prediction Loss: 4.0150e-06
+	Edge Prediction Loss: 6.6231e-06
+	Global Physics Loss: 5.6590e-09
+	Local Physics Loss: 1.7519e-06
+	Epoch Train Duration: 89.10 seconds
+
+	Validation Node RMSE: 1.7940e+03
+	Validation Edge RMSE: 2.1146e+01
+Epoch [55/300]
+	Loss: 1.2685e-05
+	Node Prediction Loss: 4.0841e-06
+	Edge Prediction Loss: 6.8255e-06
+	Global Physics Loss: 5.8456e-09
+	Local Physics Loss: 1.7698e-06
+	Epoch Train Duration: 88.84 seconds
+
+	Validation Node RMSE: 1.7367e+03
+	Validation Edge RMSE: 2.3780e+01
+Epoch [56/300]
+	Loss: 1.2227e-05
+	Node Prediction Loss: 3.9174e-06
+	Edge Prediction Loss: 6.5581e-06
+	Global Physics Loss: 5.6112e-09
+	Local Physics Loss: 1.7463e-06
+	Epoch Train Duration: 88.80 seconds
+
+	Validation Node RMSE: 1.7768e+03
+	Validation Edge RMSE: 2.1629e+01
+Epoch [57/300]
+	Loss: 1.2692e-05
+	Node Prediction Loss: 4.0926e-06
+	Edge Prediction Loss: 6.8166e-06
+	Global Physics Loss: 5.8989e-09
+	Local Physics Loss: 1.7765e-06
+	Epoch Train Duration: 88.24 seconds
+
+	Validation Node RMSE: 1.7536e+03
+	Validation Edge RMSE: 2.1075e+01
+Epoch [58/300]
+	Loss: 1.2751e-05
+	Node Prediction Loss: 4.0825e-06
+	Edge Prediction Loss: 6.8902e-06
+	Global Physics Loss: 6.0139e-09
+	Local Physics Loss: 1.7726e-06
+	Epoch Train Duration: 86.92 seconds
+
+	Validation Node RMSE: 1.6983e+03
+	Validation Edge RMSE: 2.1260e+01
+Epoch [59/300]
+	Loss: 1.2019e-05
+	Node Prediction Loss: 3.7942e-06
+	Edge Prediction Loss: 6.4900e-06
+	Global Physics Loss: 5.6455e-09
+	Local Physics Loss: 1.7296e-06
+	Epoch Train Duration: 87.06 seconds
+
+	Validation Node RMSE: 1.7179e+03
+	Validation Edge RMSE: 2.6392e+01
+Epoch [60/300]
+	Loss: 1.2091e-05
+	Node Prediction Loss: 3.8769e-06
+	Edge Prediction Loss: 6.4740e-06
+	Global Physics Loss: 5.7561e-09
+	Local Physics Loss: 1.7348e-06
+	Epoch Train Duration: 86.93 seconds
+
+	Validation Node RMSE: 1.7433e+03
+	Validation Edge RMSE: 2.1278e+01
+Epoch [61/300]
+	Loss: 1.1582e-05
+	Node Prediction Loss: 3.6342e-06
+	Edge Prediction Loss: 6.2381e-06
+	Global Physics Loss: 5.5317e-09
+	Local Physics Loss: 1.7043e-06
+	Epoch Train Duration: 87.10 seconds
+
+	Validation Node RMSE: 1.8153e+03
+	Validation Edge RMSE: 2.6722e+01
+Epoch [62/300]
+	Loss: 1.1864e-05
+	Node Prediction Loss: 3.7420e-06
+	Edge Prediction Loss: 6.3827e-06
+	Global Physics Loss: 5.6939e-09
+	Local Physics Loss: 1.7334e-06
+	Epoch Train Duration: 88.29 seconds
+
+	Validation Node RMSE: 1.7193e+03
+	Validation Edge RMSE: 3.2215e+01
+Epoch [63/300]
+	Loss: 1.1648e-05
+	Node Prediction Loss: 3.6379e-06
+	Edge Prediction Loss: 6.3046e-06
+	Global Physics Loss: 5.6293e-09
+	Local Physics Loss: 1.6996e-06
+	Epoch Train Duration: 88.85 seconds
+
+	Validation Node RMSE: 1.6968e+03
+	Validation Edge RMSE: 2.0327e+01
+Epoch [64/300]
+	Loss: 1.1200e-05
+	Node Prediction Loss: 3.4714e-06
+	Edge Prediction Loss: 6.0355e-06
+	Global Physics Loss: 5.4586e-09
+	Local Physics Loss: 1.6878e-06
+	Epoch Train Duration: 88.07 seconds
+
+	Validation Node RMSE: 1.7737e+03
+	Validation Edge RMSE: 2.4053e+01
+Epoch [65/300]
+	Loss: 1.2247e-05
+	Node Prediction Loss: 3.8989e-06
+	Edge Prediction Loss: 6.6011e-06
+	Global Physics Loss: 6.0606e-09
+	Local Physics Loss: 1.7405e-06
+	Epoch Train Duration: 91.08 seconds
+
+	Validation Node RMSE: 1.6734e+03
+	Validation Edge RMSE: 2.3090e+01
+Epoch [66/300]
+	Loss: 1.1002e-05
+	Node Prediction Loss: 3.3928e-06
+	Edge Prediction Loss: 5.9326e-06
+	Global Physics Loss: 5.4158e-09
+	Local Physics Loss: 1.6716e-06
+	Epoch Train Duration: 88.26 seconds
+
+	Validation Node RMSE: 1.5523e+03
+	Validation Edge RMSE: 1.9974e+01
+Epoch [67/300]
+	Loss: 1.1068e-05
+	Node Prediction Loss: 3.4133e-06
+	Edge Prediction Loss: 5.9741e-06
+	Global Physics Loss: 5.4838e-09
+	Local Physics Loss: 1.6751e-06
+	Epoch Train Duration: 89.85 seconds
+
+	Validation Node RMSE: 1.5967e+03
+	Validation Edge RMSE: 1.9636e+01
+Epoch [68/300]
+	Loss: 1.1495e-05
+	Node Prediction Loss: 3.5494e-06
+	Edge Prediction Loss: 6.2464e-06
+	Global Physics Loss: 5.5610e-09
+	Local Physics Loss: 1.6933e-06
+	Epoch Train Duration: 88.49 seconds
+
+	Validation Node RMSE: 1.5268e+03
+	Validation Edge RMSE: 1.8605e+01
+Epoch [69/300]
+	Loss: 1.0944e-05
+	Node Prediction Loss: 3.3499e-06
+	Edge Prediction Loss: 5.9277e-06
+	Global Physics Loss: 5.5176e-09
+	Local Physics Loss: 1.6612e-06
+	Epoch Train Duration: 89.47 seconds
+
+	Validation Node RMSE: 1.5217e+03
+	Validation Edge RMSE: 1.8672e+01
+Epoch [70/300]
+	Loss: 1.0844e-05
+	Node Prediction Loss: 3.3223e-06
+	Edge Prediction Loss: 5.8576e-06
+	Global Physics Loss: 5.4618e-09
+	Local Physics Loss: 1.6583e-06
+	Epoch Train Duration: 89.41 seconds
+
+	Validation Node RMSE: 1.6022e+03
+	Validation Edge RMSE: 2.0682e+01
+Epoch [71/300]
+	Loss: 1.1075e-05
+	Node Prediction Loss: 3.3989e-06
+	Edge Prediction Loss: 5.9989e-06
+	Global Physics Loss: 5.6433e-09
+	Local Physics Loss: 1.6715e-06
+	Epoch Train Duration: 91.57 seconds
+
+	Validation Node RMSE: 1.5646e+03
+	Validation Edge RMSE: 2.1671e+01
+Epoch [72/300]
+	Loss: 1.0610e-05
+	Node Prediction Loss: 3.2472e-06
+	Edge Prediction Loss: 5.7149e-06
+	Global Physics Loss: 5.3652e-09
+	Local Physics Loss: 1.6428e-06
+	Epoch Train Duration: 90.13 seconds
+
+	Validation Node RMSE: 1.6336e+03
+	Validation Edge RMSE: 2.0539e+01
+Epoch [73/300]
+	Loss: 1.1026e-05
+	Node Prediction Loss: 3.3880e-06
+	Edge Prediction Loss: 5.9647e-06
+	Global Physics Loss: 5.5766e-09
+	Local Physics Loss: 1.6678e-06
+	Epoch Train Duration: 90.39 seconds
+
+	Validation Node RMSE: 1.7331e+03
+	Validation Edge RMSE: 2.0186e+01
+Epoch [74/300]
+	Loss: 1.0661e-05
+	Node Prediction Loss: 3.2462e-06
+	Edge Prediction Loss: 5.7717e-06
+	Global Physics Loss: 5.3841e-09
+	Local Physics Loss: 1.6373e-06
+	Epoch Train Duration: 91.14 seconds
+
+	Validation Node RMSE: 1.4775e+03
+	Validation Edge RMSE: 1.8879e+01
+Epoch [75/300]
+	Loss: 1.0318e-05
+	Node Prediction Loss: 3.0963e-06
+	Edge Prediction Loss: 5.5964e-06
+	Global Physics Loss: 5.2987e-09
+	Local Physics Loss: 1.6204e-06
+	Epoch Train Duration: 90.44 seconds
+
+	Validation Node RMSE: 1.4796e+03
+	Validation Edge RMSE: 2.8029e+01
+Epoch [76/300]
+	Loss: 1.0079e-05
+	Node Prediction Loss: 2.9977e-06
+	Edge Prediction Loss: 5.4567e-06
+	Global Physics Loss: 5.2283e-09
+	Local Physics Loss: 1.6191e-06
+	Epoch Train Duration: 90.75 seconds
+
+	Validation Node RMSE: 1.4612e+03
+	Validation Edge RMSE: 1.7226e+01
+Epoch [77/300]
+	Loss: 1.0425e-05
+	Node Prediction Loss: 3.1488e-06
+	Edge Prediction Loss: 5.6393e-06
+	Global Physics Loss: 5.4557e-09
+	Local Physics Loss: 1.6316e-06
+	Epoch Train Duration: 90.16 seconds
+
+	Validation Node RMSE: 1.4480e+03
+	Validation Edge RMSE: 2.0586e+01
+Epoch [78/300]
+	Loss: 1.0462e-05
+	Node Prediction Loss: 3.1575e-06
+	Edge Prediction Loss: 5.6663e-06
+	Global Physics Loss: 5.5246e-09
+	Local Physics Loss: 1.6325e-06
+	Epoch Train Duration: 91.12 seconds
+
+	Validation Node RMSE: 1.3461e+03
+	Validation Edge RMSE: 1.9112e+01
+Epoch [79/300]
+	Loss: 9.8391e-06
+	Node Prediction Loss: 2.9137e-06
+	Edge Prediction Loss: 5.3286e-06
+	Global Physics Loss: 5.1515e-09
+	Local Physics Loss: 1.5918e-06
+	Epoch Train Duration: 90.19 seconds
+
+	Validation Node RMSE: 1.4970e+03
+	Validation Edge RMSE: 2.0709e+01
+Epoch [80/300]
+	Loss: 1.0006e-05
+	Node Prediction Loss: 2.9699e-06
+	Edge Prediction Loss: 5.4199e-06
+	Global Physics Loss: 5.2881e-09
+	Local Physics Loss: 1.6108e-06
+	Epoch Train Duration: 90.02 seconds
+
+	Validation Node RMSE: 1.3969e+03
+	Validation Edge RMSE: 1.8186e+01
+Epoch [81/300]
+	Loss: 1.0263e-05
+	Node Prediction Loss: 3.0665e-06
+	Edge Prediction Loss: 5.5602e-06
+	Global Physics Loss: 5.4318e-09
+	Local Physics Loss: 1.6308e-06
+	Epoch Train Duration: 88.28 seconds
+
+	Validation Node RMSE: 1.3630e+03
+	Validation Edge RMSE: 1.8018e+01
+Epoch [82/300]
+	Loss: 9.9101e-06
+	Node Prediction Loss: 2.9352e-06
+	Edge Prediction Loss: 5.3828e-06
+	Global Physics Loss: 5.3126e-09
+	Local Physics Loss: 1.5867e-06
+	Epoch Train Duration: 88.64 seconds
+
+	Validation Node RMSE: 1.5312e+03
+	Validation Edge RMSE: 2.1716e+01
+Epoch [83/300]
+	Loss: 1.0047e-05
+	Node Prediction Loss: 2.9782e-06
+	Edge Prediction Loss: 5.4581e-06
+	Global Physics Loss: 5.3364e-09
+	Local Physics Loss: 1.6055e-06
+	Epoch Train Duration: 90.11 seconds
+
+	Validation Node RMSE: 1.4339e+03
+	Validation Edge RMSE: 2.0618e+01
+Epoch [84/300]
+	Loss: 9.8089e-06
+	Node Prediction Loss: 2.8925e-06
+	Edge Prediction Loss: 5.3295e-06
+	Global Physics Loss: 5.2815e-09
+	Local Physics Loss: 1.5816e-06
+	Epoch Train Duration: 90.07 seconds
+
+	Validation Node RMSE: 1.3859e+03
+	Validation Edge RMSE: 1.7799e+01
+Epoch [85/300]
+	Loss: 1.0078e-05
+	Node Prediction Loss: 3.0091e-06
+	Edge Prediction Loss: 5.4634e-06
+	Global Physics Loss: 5.3870e-09
+	Local Physics Loss: 1.6003e-06
+	Epoch Train Duration: 90.13 seconds
+
+	Validation Node RMSE: 1.3104e+03
+	Validation Edge RMSE: 1.8953e+01
+Epoch [86/300]
+	Loss: 9.3395e-06
+	Node Prediction Loss: 2.6935e-06
+	Edge Prediction Loss: 5.0781e-06
+	Global Physics Loss: 5.0441e-09
+	Local Physics Loss: 1.5629e-06
+	Epoch Train Duration: 90.57 seconds
+
+	Validation Node RMSE: 1.3714e+03
+	Validation Edge RMSE: 2.0678e+01
+Epoch [87/300]
+	Loss: 9.6267e-06
+	Node Prediction Loss: 2.8438e-06
+	Edge Prediction Loss: 5.2092e-06
+	Global Physics Loss: 5.1242e-09
+	Local Physics Loss: 1.5686e-06
+	Epoch Train Duration: 89.95 seconds
+
+	Validation Node RMSE: 1.5519e+03
+	Validation Edge RMSE: 2.3580e+01
+Epoch [88/300]
+	Loss: 9.5532e-06
+	Node Prediction Loss: 2.8003e-06
+	Edge Prediction Loss: 5.1768e-06
+	Global Physics Loss: 5.1970e-09
+	Local Physics Loss: 1.5709e-06
+	Epoch Train Duration: 89.53 seconds
+
+	Validation Node RMSE: 1.3581e+03
+	Validation Edge RMSE: 1.6967e+01
+Epoch [89/300]
+	Loss: 9.2824e-06
+	Node Prediction Loss: 2.6942e-06
+	Edge Prediction Loss: 5.0232e-06
+	Global Physics Loss: 5.0560e-09
+	Local Physics Loss: 1.5600e-06
+	Epoch Train Duration: 89.52 seconds
+
+	Validation Node RMSE: 1.4548e+03
+	Validation Edge RMSE: 2.5564e+01
+Epoch [90/300]
+	Loss: 9.4478e-06
+	Node Prediction Loss: 2.7688e-06
+	Edge Prediction Loss: 5.1084e-06
+	Global Physics Loss: 5.2328e-09
+	Local Physics Loss: 1.5654e-06
+	Epoch Train Duration: 90.91 seconds
+
+	Validation Node RMSE: 1.2804e+03
+	Validation Edge RMSE: 1.6364e+01
+Epoch [91/300]
+	Loss: 9.3995e-06
+	Node Prediction Loss: 2.7245e-06
+	Edge Prediction Loss: 5.1075e-06
+	Global Physics Loss: 5.1959e-09
+	Local Physics Loss: 1.5623e-06
+	Epoch Train Duration: 90.60 seconds
+
+	Validation Node RMSE: 1.3130e+03
+	Validation Edge RMSE: 1.8114e+01
+Epoch [92/300]
+	Loss: 9.0486e-06
+	Node Prediction Loss: 2.5883e-06
+	Edge Prediction Loss: 4.9191e-06
+	Global Physics Loss: 4.9474e-09
+	Local Physics Loss: 1.5362e-06
+	Epoch Train Duration: 88.82 seconds
+
+	Validation Node RMSE: 1.2661e+03
+	Validation Edge RMSE: 1.5605e+01
+Epoch [93/300]
+	Loss: 9.4872e-06
+	Node Prediction Loss: 2.7677e-06
+	Edge Prediction Loss: 5.1560e-06
+	Global Physics Loss: 5.2391e-09
+	Local Physics Loss: 1.5582e-06
+	Epoch Train Duration: 87.19 seconds
+
+	Validation Node RMSE: 1.4558e+03
+	Validation Edge RMSE: 2.8162e+01
+Epoch [94/300]
+	Loss: 8.9565e-06
+	Node Prediction Loss: 2.5574e-06
+	Edge Prediction Loss: 4.8652e-06
+	Global Physics Loss: 5.0131e-09
+	Local Physics Loss: 1.5289e-06
+	Epoch Train Duration: 92.29 seconds
+
+	Validation Node RMSE: 1.2767e+03
+	Validation Edge RMSE: 1.5677e+01
+Epoch [95/300]
+	Loss: 8.6486e-06
+	Node Prediction Loss: 2.4421e-06
+	Edge Prediction Loss: 4.6973e-06
+	Global Physics Loss: 4.7904e-09
+	Local Physics Loss: 1.5044e-06
+	Epoch Train Duration: 89.15 seconds
+
+	Validation Node RMSE: 1.2624e+03
+	Validation Edge RMSE: 1.7912e+01
+Epoch [96/300]
+	Loss: 9.4449e-06
+	Node Prediction Loss: 2.7769e-06
+	Edge Prediction Loss: 5.0936e-06
+	Global Physics Loss: 5.2653e-09
+	Local Physics Loss: 1.5691e-06
+	Epoch Train Duration: 88.25 seconds
+
+	Validation Node RMSE: 1.5142e+03
+	Validation Edge RMSE: 1.7427e+01
+Epoch [97/300]
+	Loss: 9.0775e-06
+	Node Prediction Loss: 2.6034e-06
+	Edge Prediction Loss: 4.9394e-06
+	Global Physics Loss: 5.1220e-09
+	Local Physics Loss: 1.5296e-06
+	Epoch Train Duration: 89.51 seconds
+
+	Validation Node RMSE: 1.3468e+03
+	Validation Edge RMSE: 1.6564e+01
+Epoch [98/300]
+	Loss: 8.7400e-06
+	Node Prediction Loss: 2.4749e-06
+	Edge Prediction Loss: 4.7490e-06
+	Global Physics Loss: 4.9229e-09
+	Local Physics Loss: 1.5111e-06
+	Epoch Train Duration: 88.77 seconds
+
+	Validation Node RMSE: 1.2917e+03
+	Validation Edge RMSE: 2.0493e+01
+Epoch [99/300]
+	Loss: 9.0985e-06
+	Node Prediction Loss: 2.6202e-06
+	Edge Prediction Loss: 4.9281e-06
+	Global Physics Loss: 5.1571e-09
+	Local Physics Loss: 1.5450e-06
+	Epoch Train Duration: 87.36 seconds
+
+	Validation Node RMSE: 1.3058e+03
+	Validation Edge RMSE: 1.9668e+01
+Epoch [100/300]
+	Loss: 8.7475e-06
+	Node Prediction Loss: 2.4694e-06
+	Edge Prediction Loss: 4.7669e-06
+	Global Physics Loss: 4.9259e-09
+	Local Physics Loss: 1.5063e-06
+	Epoch Train Duration: 87.30 seconds
+
+	Validation Node RMSE: 1.3435e+03
+	Validation Edge RMSE: 2.4559e+01
+	Curriculum learning for 2 steps ended after 100 epochs.
+	Increased current_num_timesteps to 4 timesteps.
+	Decayed learning rate to 7.0000e-05.
+Epoch [101/300]
+	Loss: 9.0642e-06
+	Node Prediction Loss: 1.9416e-06
+	Edge Prediction Loss: 4.3145e-06
+	Global Physics Loss: 4.2293e-09
+	Local Physics Loss: 2.8039e-06
+	Epoch Train Duration: 172.24 seconds
+
+	Validation Node RMSE: 1.2457e+03
+	Validation Edge RMSE: 1.5123e+01
+Epoch [102/300]
+	Loss: 8.9780e-06
+	Node Prediction Loss: 1.9609e-06
+	Edge Prediction Loss: 4.3282e-06
+	Global Physics Loss: 4.2725e-09
+	Local Physics Loss: 2.6846e-06
+	Epoch Train Duration: 173.06 seconds
+
+	Validation Node RMSE: 1.2236e+03
+	Validation Edge RMSE: 1.5654e+01
+Epoch [103/300]
+	Loss: 9.1100e-06
+	Node Prediction Loss: 2.0335e-06
+	Edge Prediction Loss: 4.4149e-06
+	Global Physics Loss: 4.4087e-09
+	Local Physics Loss: 2.6571e-06
+	Epoch Train Duration: 171.84 seconds
+
+	Validation Node RMSE: 1.2749e+03
+	Validation Edge RMSE: 2.2544e+01
+Epoch [104/300]
+	Loss: 8.9085e-06
+	Node Prediction Loss: 1.9779e-06
+	Edge Prediction Loss: 4.3495e-06
+	Global Physics Loss: 4.2896e-09
+	Local Physics Loss: 2.5768e-06
+	Epoch Train Duration: 173.39 seconds
+
+	Validation Node RMSE: 1.3503e+03
+	Validation Edge RMSE: 2.3174e+01
+Epoch [105/300]
+	Loss: 8.7852e-06
+	Node Prediction Loss: 1.9581e-06
+	Edge Prediction Loss: 4.3174e-06
+	Global Physics Loss: 4.3113e-09
+	Local Physics Loss: 2.5053e-06
+	Epoch Train Duration: 173.55 seconds
+
+	Validation Node RMSE: 1.2099e+03
+	Validation Edge RMSE: 1.6859e+01
+Epoch [106/300]
+	Loss: 8.8520e-06
+	Node Prediction Loss: 1.9773e-06
+	Edge Prediction Loss: 4.3506e-06
+	Global Physics Loss: 4.3572e-09
+	Local Physics Loss: 2.5198e-06
+	Epoch Train Duration: 174.33 seconds
+
+	Validation Node RMSE: 1.3022e+03
+	Validation Edge RMSE: 2.4954e+01
+Epoch [107/300]
+	Loss: 8.8165e-06
+	Node Prediction Loss: 1.9863e-06
+	Edge Prediction Loss: 4.3303e-06
+	Global Physics Loss: 4.4052e-09
+	Local Physics Loss: 2.4954e-06
+	Epoch Train Duration: 173.90 seconds
+
+	Validation Node RMSE: 1.2723e+03
+	Validation Edge RMSE: 2.0075e+01
+Epoch [108/300]
+	Loss: 8.8045e-06
+	Node Prediction Loss: 1.9838e-06
+	Edge Prediction Loss: 4.3443e-06
+	Global Physics Loss: 4.4083e-09
+	Local Physics Loss: 2.4719e-06
+	Epoch Train Duration: 173.66 seconds
+
+	Validation Node RMSE: 1.2270e+03
+	Validation Edge RMSE: 1.6659e+01
+Epoch [109/300]
+	Loss: 8.7229e-06
+	Node Prediction Loss: 1.9493e-06
+	Edge Prediction Loss: 4.3258e-06
+	Global Physics Loss: 4.3551e-09
+	Local Physics Loss: 2.4435e-06
+	Epoch Train Duration: 174.17 seconds
+
+	Validation Node RMSE: 1.2414e+03
+	Validation Edge RMSE: 1.6522e+01
+Epoch [110/300]
+	Loss: 8.5776e-06
+	Node Prediction Loss: 1.9081e-06
+	Edge Prediction Loss: 4.2637e-06
+	Global Physics Loss: 4.3161e-09
+	Local Physics Loss: 2.4014e-06
+	Epoch Train Duration: 173.92 seconds
+
+	Validation Node RMSE: 1.4188e+03
+	Validation Edge RMSE: 2.2174e+01
+Epoch [111/300]
+	Loss: 8.3956e-06
+	Node Prediction Loss: 1.8583e-06
+	Edge Prediction Loss: 4.1708e-06
+	Global Physics Loss: 4.1761e-09
+	Local Physics Loss: 2.3623e-06
+	Epoch Train Duration: 172.64 seconds
+
+	Validation Node RMSE: 1.1297e+03
+	Validation Edge RMSE: 1.4579e+01
+Epoch [112/300]
+	Loss: 8.7482e-06
+	Node Prediction Loss: 1.9817e-06
+	Edge Prediction Loss: 4.3219e-06
+	Global Physics Loss: 4.4327e-09
+	Local Physics Loss: 2.4402e-06
+	Epoch Train Duration: 172.77 seconds
+
+	Validation Node RMSE: 1.1324e+03
+	Validation Edge RMSE: 1.5121e+01
+Epoch [113/300]
+	Loss: 8.3337e-06
+	Node Prediction Loss: 1.8459e-06
+	Edge Prediction Loss: 4.1584e-06
+	Global Physics Loss: 4.2270e-09
+	Local Physics Loss: 2.3252e-06
+	Epoch Train Duration: 173.33 seconds
+
+	Validation Node RMSE: 1.1697e+03
+	Validation Edge RMSE: 1.5145e+01
+Epoch [114/300]
+	Loss: 8.5374e-06
+	Node Prediction Loss: 1.9049e-06
+	Edge Prediction Loss: 4.2263e-06
+	Global Physics Loss: 4.3262e-09
+	Local Physics Loss: 2.4019e-06
+	Epoch Train Duration: 173.76 seconds
+
+	Validation Node RMSE: 1.1554e+03
+	Validation Edge RMSE: 1.4570e+01
+Epoch [115/300]
+	Loss: 8.2921e-06
+	Node Prediction Loss: 1.8500e-06
+	Edge Prediction Loss: 4.1539e-06
+	Global Physics Loss: 4.2539e-09
+	Local Physics Loss: 2.2840e-06
+	Epoch Train Duration: 173.97 seconds
+
+	Validation Node RMSE: 1.1536e+03
+	Validation Edge RMSE: 1.7670e+01
+Epoch [116/300]
+	Loss: 8.2633e-06
+	Node Prediction Loss: 1.8330e-06
+	Edge Prediction Loss: 4.1128e-06
+	Global Physics Loss: 4.2169e-09
+	Local Physics Loss: 2.3132e-06
+	Epoch Train Duration: 173.42 seconds
+
+	Validation Node RMSE: 1.0801e+03
+	Validation Edge RMSE: 1.4795e+01
+Epoch [117/300]
+	Loss: 8.4091e-06
+	Node Prediction Loss: 1.8793e-06
+	Edge Prediction Loss: 4.1901e-06
+	Global Physics Loss: 4.2919e-09
+	Local Physics Loss: 2.3355e-06
+	Epoch Train Duration: 172.23 seconds
+
+	Validation Node RMSE: 1.1870e+03
+	Validation Edge RMSE: 1.7692e+01
+Epoch [118/300]
+	Loss: 8.3104e-06
+	Node Prediction Loss: 1.8598e-06
+	Edge Prediction Loss: 4.1494e-06
+	Global Physics Loss: 4.2958e-09
+	Local Physics Loss: 2.2969e-06
+	Epoch Train Duration: 170.77 seconds
+
+	Validation Node RMSE: 1.1230e+03
+	Validation Edge RMSE: 1.4473e+01
+Epoch [119/300]
+	Loss: 8.2871e-06
+	Node Prediction Loss: 1.8130e-06
+	Edge Prediction Loss: 4.1071e-06
+	Global Physics Loss: 4.2462e-09
+	Local Physics Loss: 2.3627e-06
+	Epoch Train Duration: 171.35 seconds
+
+	Validation Node RMSE: 1.1184e+03
+	Validation Edge RMSE: 1.4692e+01
+Epoch [120/300]
+	Loss: 8.1049e-06
+	Node Prediction Loss: 1.8084e-06
+	Edge Prediction Loss: 4.0703e-06
+	Global Physics Loss: 4.2019e-09
+	Local Physics Loss: 2.2220e-06
+	Epoch Train Duration: 172.37 seconds
+
+	Validation Node RMSE: 1.2016e+03
+	Validation Edge RMSE: 1.6338e+01
+Epoch [121/300]
+	Loss: 8.3186e-06
+	Node Prediction Loss: 1.8447e-06
+	Edge Prediction Loss: 4.1347e-06
+	Global Physics Loss: 4.2912e-09
+	Local Physics Loss: 2.3349e-06
+	Epoch Train Duration: 172.72 seconds
+
+	Validation Node RMSE: 1.1437e+03
+	Validation Edge RMSE: 1.7122e+01
+Epoch [122/300]
+	Loss: 8.0770e-06
+	Node Prediction Loss: 1.7894e-06
+	Edge Prediction Loss: 4.0513e-06
+	Global Physics Loss: 4.2121e-09
+	Local Physics Loss: 2.2322e-06
+	Epoch Train Duration: 172.75 seconds
+
+	Validation Node RMSE: 1.1499e+03
+	Validation Edge RMSE: 1.6819e+01
+Epoch [123/300]
+	Loss: 8.0376e-06
+	Node Prediction Loss: 1.7595e-06
+	Edge Prediction Loss: 4.0238e-06
+	Global Physics Loss: 4.2031e-09
+	Local Physics Loss: 2.2502e-06
+	Epoch Train Duration: 172.43 seconds
+
+	Validation Node RMSE: 1.0684e+03
+	Validation Edge RMSE: 1.3977e+01
+Epoch [124/300]
+	Loss: 8.0613e-06
+	Node Prediction Loss: 1.7941e-06
+	Edge Prediction Loss: 4.0205e-06
+	Global Physics Loss: 4.1846e-09
+	Local Physics Loss: 2.2425e-06
+	Epoch Train Duration: 171.62 seconds
+
+	Validation Node RMSE: 1.1050e+03
+	Validation Edge RMSE: 1.4417e+01
+Epoch [125/300]
+	Loss: 7.9879e-06
+	Node Prediction Loss: 1.7408e-06
+	Edge Prediction Loss: 3.9907e-06
+	Global Physics Loss: 4.1812e-09
+	Local Physics Loss: 2.2522e-06
+	Epoch Train Duration: 171.96 seconds
+
+	Validation Node RMSE: 1.1257e+03
+	Validation Edge RMSE: 1.5272e+01
+Epoch [126/300]
+	Loss: 8.0602e-06
+	Node Prediction Loss: 1.7936e-06
+	Edge Prediction Loss: 4.0303e-06
+	Global Physics Loss: 4.2337e-09
+	Local Physics Loss: 2.2321e-06
+	Epoch Train Duration: 171.85 seconds
+
+	Validation Node RMSE: 1.0776e+03
+	Validation Edge RMSE: 1.5388e+01
+Epoch [127/300]
+	Loss: 7.8910e-06
+	Node Prediction Loss: 1.7248e-06
+	Edge Prediction Loss: 3.9795e-06
+	Global Physics Loss: 4.1641e-09
+	Local Physics Loss: 2.1825e-06
+	Epoch Train Duration: 171.68 seconds
+
+	Validation Node RMSE: 1.1194e+03
+	Validation Edge RMSE: 1.4801e+01
+Epoch [128/300]
+	Loss: 7.9110e-06
+	Node Prediction Loss: 1.7281e-06
+	Edge Prediction Loss: 3.9552e-06
+	Global Physics Loss: 4.1355e-09
+	Local Physics Loss: 2.2235e-06
+	Epoch Train Duration: 171.57 seconds
+
+	Validation Node RMSE: 1.2573e+03
+	Validation Edge RMSE: 1.8242e+01
+Epoch [129/300]
+	Loss: 7.9426e-06
+	Node Prediction Loss: 1.7402e-06
+	Edge Prediction Loss: 3.9662e-06
+	Global Physics Loss: 4.2056e-09
+	Local Physics Loss: 2.2320e-06
+	Epoch Train Duration: 172.02 seconds
+
+	Validation Node RMSE: 1.2494e+03
+	Validation Edge RMSE: 2.3666e+01
+Epoch [130/300]
+	Loss: 7.9082e-06
+	Node Prediction Loss: 1.7418e-06
+	Edge Prediction Loss: 3.9697e-06
+	Global Physics Loss: 4.1924e-09
+	Local Physics Loss: 2.1924e-06
+	Epoch Train Duration: 172.15 seconds
+
+	Validation Node RMSE: 1.1434e+03
+	Validation Edge RMSE: 1.4876e+01
+Epoch [131/300]
+	Loss: 7.8538e-06
+	Node Prediction Loss: 1.7272e-06
+	Edge Prediction Loss: 3.9527e-06
+	Global Physics Loss: 4.2028e-09
+	Local Physics Loss: 2.1698e-06
+	Epoch Train Duration: 172.23 seconds
+
+	Validation Node RMSE: 1.0556e+03
+	Validation Edge RMSE: 1.5505e+01
+Epoch [132/300]
+	Loss: 8.0332e-06
+	Node Prediction Loss: 1.7881e-06
+	Edge Prediction Loss: 4.0348e-06
+	Global Physics Loss: 4.3002e-09
+	Local Physics Loss: 2.2060e-06
+	Epoch Train Duration: 172.16 seconds
+
+	Validation Node RMSE: 1.1258e+03
+	Validation Edge RMSE: 1.5165e+01
+Epoch [133/300]
+	Loss: 7.6988e-06
+	Node Prediction Loss: 1.6754e-06
+	Edge Prediction Loss: 3.8807e-06
+	Global Physics Loss: 4.1033e-09
+	Local Physics Loss: 2.1386e-06
+	Epoch Train Duration: 171.79 seconds
+
+	Validation Node RMSE: 1.2215e+03
+	Validation Edge RMSE: 1.8222e+01
+Epoch [134/300]
+	Loss: 7.9148e-06
+	Node Prediction Loss: 1.7363e-06
+	Edge Prediction Loss: 3.9808e-06
+	Global Physics Loss: 4.2802e-09
+	Local Physics Loss: 2.1934e-06
+	Epoch Train Duration: 173.94 seconds
+
+	Validation Node RMSE: 1.1971e+03
+	Validation Edge RMSE: 1.4990e+01
+Epoch [135/300]
+	Loss: 7.6456e-06
+	Node Prediction Loss: 1.6450e-06
+	Edge Prediction Loss: 3.8446e-06
+	Global Physics Loss: 4.0386e-09
+	Local Physics Loss: 2.1520e-06
+	Epoch Train Duration: 172.38 seconds
+
+	Validation Node RMSE: 1.0677e+03
+	Validation Edge RMSE: 1.4442e+01
+Epoch [136/300]
+	Loss: 7.7190e-06
+	Node Prediction Loss: 1.6794e-06
+	Edge Prediction Loss: 3.8837e-06
+	Global Physics Loss: 4.1246e-09
+	Local Physics Loss: 2.1517e-06
+	Epoch Train Duration: 172.18 seconds
+
+	Validation Node RMSE: 1.0538e+03
+	Validation Edge RMSE: 1.4357e+01
+Epoch [137/300]
+	Loss: 7.7207e-06
+	Node Prediction Loss: 1.6778e-06
+	Edge Prediction Loss: 3.8784e-06
+	Global Physics Loss: 4.1504e-09
+	Local Physics Loss: 2.1603e-06
+	Epoch Train Duration: 171.77 seconds
+
+	Validation Node RMSE: 1.1850e+03
+	Validation Edge RMSE: 1.6945e+01
+Epoch [138/300]
+	Loss: 7.7154e-06
+	Node Prediction Loss: 1.6875e-06
+	Edge Prediction Loss: 3.8835e-06
+	Global Physics Loss: 4.1436e-09
+	Local Physics Loss: 2.1402e-06
+	Epoch Train Duration: 171.97 seconds
+
+	Validation Node RMSE: 1.1430e+03
+	Validation Edge RMSE: 1.7666e+01
+	Curriculum learning for 4 steps ended after 38 epochs.
+	Increased current_num_timesteps to 6 timesteps.
+	Decayed learning rate to 4.9000e-05.
+Epoch [139/300]
+	Loss: 8.0193e-06
+	Node Prediction Loss: 1.4424e-06
+	Edge Prediction Loss: 3.6895e-06
+	Global Physics Loss: 3.7503e-09
+	Local Physics Loss: 2.8836e-06
+	Epoch Train Duration: 258.26 seconds
+
+	Validation Node RMSE: 1.0559e+03
+	Validation Edge RMSE: 1.3938e+01
+Epoch [140/300]
+	Loss: 8.0408e-06
+	Node Prediction Loss: 1.4643e-06
+	Edge Prediction Loss: 3.7236e-06
+	Global Physics Loss: 3.8021e-09
+	Local Physics Loss: 2.8491e-06
+	Epoch Train Duration: 258.39 seconds
+
+	Validation Node RMSE: 1.0791e+03
+	Validation Edge RMSE: 1.4969e+01
+Epoch [141/300]
+	Loss: 8.0180e-06
+	Node Prediction Loss: 1.4685e-06
+	Edge Prediction Loss: 3.7231e-06
+	Global Physics Loss: 3.7934e-09
+	Local Physics Loss: 2.8227e-06
+	Epoch Train Duration: 255.68 seconds
+
+	Validation Node RMSE: 1.0347e+03
+	Validation Edge RMSE: 1.4208e+01
+Epoch [142/300]
+	Loss: 7.9882e-06
+	Node Prediction Loss: 1.4637e-06
+	Edge Prediction Loss: 3.7330e-06
+	Global Physics Loss: 3.7971e-09
+	Local Physics Loss: 2.7877e-06
+	Epoch Train Duration: 258.10 seconds
+
+	Validation Node RMSE: 1.0207e+03
+	Validation Edge RMSE: 1.3619e+01
+Epoch [143/300]
+	Loss: 7.9704e-06
+	Node Prediction Loss: 1.4571e-06
+	Edge Prediction Loss: 3.7276e-06
+	Global Physics Loss: 3.8033e-09
+	Local Physics Loss: 2.7818e-06
+	Epoch Train Duration: 261.65 seconds
+
+	Validation Node RMSE: 1.0035e+03
+	Validation Edge RMSE: 1.3596e+01
+Epoch [144/300]
+	Loss: 7.9074e-06
+	Node Prediction Loss: 1.4534e-06
+	Edge Prediction Loss: 3.7120e-06
+	Global Physics Loss: 3.7823e-09
+	Local Physics Loss: 2.7382e-06
+	Epoch Train Duration: 257.49 seconds
+
+	Validation Node RMSE: 1.0409e+03
+	Validation Edge RMSE: 1.5425e+01
+Epoch [145/300]
+	Loss: 7.9280e-06
+	Node Prediction Loss: 1.4458e-06
+	Edge Prediction Loss: 3.7083e-06
+	Global Physics Loss: 3.7751e-09
+	Local Physics Loss: 2.7701e-06
+	Epoch Train Duration: 255.47 seconds
+
+	Validation Node RMSE: 1.0325e+03
+	Validation Edge RMSE: 1.4443e+01
+Epoch [146/300]
+	Loss: 7.8631e-06
+	Node Prediction Loss: 1.4494e-06
+	Edge Prediction Loss: 3.7001e-06
+	Global Physics Loss: 3.8007e-09
+	Local Physics Loss: 2.7098e-06
+	Epoch Train Duration: 258.09 seconds
+
+	Validation Node RMSE: 1.0459e+03
+	Validation Edge RMSE: 1.4276e+01
+Epoch [147/300]
+	Loss: 7.8617e-06
+	Node Prediction Loss: 1.4360e-06
+	Edge Prediction Loss: 3.6939e-06
+	Global Physics Loss: 3.7599e-09
+	Local Physics Loss: 2.7281e-06
+	Epoch Train Duration: 258.65 seconds
+
+	Validation Node RMSE: 1.0450e+03
+	Validation Edge RMSE: 1.6294e+01
+Epoch [148/300]
+	Loss: 7.8430e-06
+	Node Prediction Loss: 1.4503e-06
+	Edge Prediction Loss: 3.7053e-06
+	Global Physics Loss: 3.8119e-09
+	Local Physics Loss: 2.6835e-06
+	Epoch Train Duration: 258.90 seconds
+
+	Validation Node RMSE: 1.0268e+03
+	Validation Edge RMSE: 1.3849e+01
+Epoch [149/300]
+	Loss: 7.7815e-06
+	Node Prediction Loss: 1.4192e-06
+	Edge Prediction Loss: 3.6703e-06
+	Global Physics Loss: 3.7364e-09
+	Local Physics Loss: 2.6882e-06
+	Epoch Train Duration: 257.43 seconds
+
+	Validation Node RMSE: 1.0133e+03
+	Validation Edge RMSE: 1.3659e+01
+Epoch [150/300]
+	Loss: 7.8202e-06
+	Node Prediction Loss: 1.4343e-06
+	Edge Prediction Loss: 3.6840e-06
+	Global Physics Loss: 3.7856e-09
+	Local Physics Loss: 2.6981e-06
+	Epoch Train Duration: 257.15 seconds
+
+	Validation Node RMSE: 1.0114e+03
+	Validation Edge RMSE: 1.3240e+01
+Epoch [151/300]
+	Loss: 7.7481e-06
+	Node Prediction Loss: 1.4233e-06
+	Edge Prediction Loss: 3.6653e-06
+	Global Physics Loss: 3.7600e-09
+	Local Physics Loss: 2.6558e-06
+	Epoch Train Duration: 258.11 seconds
+
+	Validation Node RMSE: 9.8577e+02
+	Validation Edge RMSE: 1.3631e+01
+Epoch [152/300]
+	Loss: 7.6978e-06
+	Node Prediction Loss: 1.4068e-06
+	Edge Prediction Loss: 3.6406e-06
+	Global Physics Loss: 3.7343e-09
+	Local Physics Loss: 2.6467e-06
+	Epoch Train Duration: 255.28 seconds
+
+	Validation Node RMSE: 1.0139e+03
+	Validation Edge RMSE: 1.4009e+01
+Epoch [153/300]
+	Loss: 7.7118e-06
+	Node Prediction Loss: 1.4252e-06
+	Edge Prediction Loss: 3.6576e-06
+	Global Physics Loss: 3.7820e-09
+	Local Physics Loss: 2.6253e-06
+	Epoch Train Duration: 256.70 seconds
+
+	Validation Node RMSE: 1.1271e+03
+	Validation Edge RMSE: 1.5606e+01
+Epoch [154/300]
+	Loss: 7.6571e-06
+	Node Prediction Loss: 1.4029e-06
+	Edge Prediction Loss: 3.6440e-06
+	Global Physics Loss: 3.7487e-09
+	Local Physics Loss: 2.6065e-06
+	Epoch Train Duration: 260.13 seconds
+
+	Validation Node RMSE: 9.9433e+02
+	Validation Edge RMSE: 1.3547e+01
+Epoch [155/300]
+	Loss: 7.7030e-06
+	Node Prediction Loss: 1.3956e-06
+	Edge Prediction Loss: 3.6292e-06
+	Global Physics Loss: 3.7050e-09
+	Local Physics Loss: 2.6746e-06
+	Epoch Train Duration: 261.62 seconds
+
+	Validation Node RMSE: 1.0125e+03
+	Validation Edge RMSE: 1.4004e+01
+Epoch [156/300]
+	Loss: 7.6624e-06
+	Node Prediction Loss: 1.3913e-06
+	Edge Prediction Loss: 3.6272e-06
+	Global Physics Loss: 3.7349e-09
+	Local Physics Loss: 2.6402e-06
+	Epoch Train Duration: 255.12 seconds
+
+	Validation Node RMSE: 1.0063e+03
+	Validation Edge RMSE: 1.4613e+01
+Epoch [157/300]
+	Loss: 7.6870e-06
+	Node Prediction Loss: 1.4060e-06
+	Edge Prediction Loss: 3.6385e-06
+	Global Physics Loss: 3.7600e-09
+	Local Physics Loss: 2.6387e-06
+	Epoch Train Duration: 255.69 seconds
+
+	Validation Node RMSE: 9.7611e+02
+	Validation Edge RMSE: 1.2927e+01
+Epoch [158/300]
+	Loss: 7.5804e-06
+	Node Prediction Loss: 1.3872e-06
+	Edge Prediction Loss: 3.6061e-06
+	Global Physics Loss: 3.7112e-09
+	Local Physics Loss: 2.5835e-06
+	Epoch Train Duration: 261.13 seconds
+
+	Validation Node RMSE: 9.7399e+02
+	Validation Edge RMSE: 1.3016e+01
+Epoch [159/300]
+	Loss: 7.5763e-06
+	Node Prediction Loss: 1.3766e-06
+	Edge Prediction Loss: 3.6071e-06
+	Global Physics Loss: 3.7113e-09
+	Local Physics Loss: 2.5888e-06
+	Epoch Train Duration: 258.02 seconds
+
+	Validation Node RMSE: 9.7122e+02
+	Validation Edge RMSE: 1.3419e+01
+Epoch [160/300]
+	Loss: 7.6075e-06
+	Node Prediction Loss: 1.3833e-06
+	Edge Prediction Loss: 3.5995e-06
+	Global Physics Loss: 3.7206e-09
+	Local Physics Loss: 2.6211e-06
+	Epoch Train Duration: 255.42 seconds
+
+	Validation Node RMSE: 9.5472e+02
+	Validation Edge RMSE: 1.3198e+01
+Epoch [161/300]
+	Loss: 7.4566e-06
+	Node Prediction Loss: 1.3576e-06
+	Edge Prediction Loss: 3.5799e-06
+	Global Physics Loss: 3.6829e-09
+	Local Physics Loss: 2.5154e-06
+	Epoch Train Duration: 260.90 seconds
+
+	Validation Node RMSE: 9.5080e+02
+	Validation Edge RMSE: 1.3399e+01
+Epoch [162/300]
+	Loss: 7.6190e-06
+	Node Prediction Loss: 1.3827e-06
+	Edge Prediction Loss: 3.6150e-06
+	Global Physics Loss: 3.7513e-09
+	Local Physics Loss: 2.6175e-06
+	Epoch Train Duration: 258.45 seconds
+
+	Validation Node RMSE: 1.0300e+03
+	Validation Edge RMSE: 1.5257e+01
+Epoch [163/300]
+	Loss: 7.4571e-06
+	Node Prediction Loss: 1.3555e-06
+	Edge Prediction Loss: 3.5686e-06
+	Global Physics Loss: 3.6815e-09
+	Local Physics Loss: 2.5293e-06
+	Epoch Train Duration: 260.93 seconds
+
+	Validation Node RMSE: 9.5816e+02
+	Validation Edge RMSE: 1.3195e+01
+Epoch [164/300]
+	Loss: 7.4797e-06
+	Node Prediction Loss: 1.3592e-06
+	Edge Prediction Loss: 3.5812e-06
+	Global Physics Loss: 3.7155e-09
+	Local Physics Loss: 2.5356e-06
+	Epoch Train Duration: 257.53 seconds
+
+	Validation Node RMSE: 1.0001e+03
+	Validation Edge RMSE: 1.4772e+01
+Epoch [165/300]
+	Loss: 7.5458e-06
+	Node Prediction Loss: 1.3616e-06
+	Edge Prediction Loss: 3.5835e-06
+	Global Physics Loss: 3.7025e-09
+	Local Physics Loss: 2.5970e-06
+	Epoch Train Duration: 257.98 seconds
+
+	Validation Node RMSE: 9.5527e+02
+	Validation Edge RMSE: 1.3293e+01
+Epoch [166/300]
+	Loss: 7.4252e-06
+	Node Prediction Loss: 1.3549e-06
+	Edge Prediction Loss: 3.5610e-06
+	Global Physics Loss: 3.6988e-09
+	Local Physics Loss: 2.5056e-06
+	Epoch Train Duration: 259.18 seconds
+
+	Validation Node RMSE: 1.0096e+03
+	Validation Edge RMSE: 1.4331e+01
+Epoch [167/300]
+	Loss: 7.4438e-06
+	Node Prediction Loss: 1.3484e-06
+	Edge Prediction Loss: 3.5630e-06
+	Global Physics Loss: 3.7038e-09
+	Local Physics Loss: 2.5286e-06
+	Epoch Train Duration: 259.90 seconds
+
+	Validation Node RMSE: 9.6112e+02
+	Validation Edge RMSE: 1.3369e+01
+Epoch [168/300]
+	Loss: 7.3761e-06
+	Node Prediction Loss: 1.3292e-06
+	Edge Prediction Loss: 3.5365e-06
+	Global Physics Loss: 3.6456e-09
+	Local Physics Loss: 2.5067e-06
+	Epoch Train Duration: 259.62 seconds
+
+	Validation Node RMSE: 9.3783e+02
+	Validation Edge RMSE: 1.3022e+01
+Epoch [169/300]
+	Loss: 7.3517e-06
+	Node Prediction Loss: 1.3291e-06
+	Edge Prediction Loss: 3.5424e-06
+	Global Physics Loss: 3.6626e-09
+	Local Physics Loss: 2.4764e-06
+	Epoch Train Duration: 255.85 seconds
+
+	Validation Node RMSE: 9.5542e+02
+	Validation Edge RMSE: 1.3091e+01
+Epoch [170/300]
+	Loss: 7.4267e-06
+	Node Prediction Loss: 1.3301e-06
+	Edge Prediction Loss: 3.5332e-06
+	Global Physics Loss: 3.6668e-09
+	Local Physics Loss: 2.5597e-06
+	Epoch Train Duration: 254.86 seconds
+
+	Validation Node RMSE: 9.4494e+02
+	Validation Edge RMSE: 1.3203e+01
+Epoch [171/300]
+	Loss: 7.3590e-06
+	Node Prediction Loss: 1.3347e-06
+	Edge Prediction Loss: 3.5321e-06
+	Global Physics Loss: 3.6708e-09
+	Local Physics Loss: 2.4885e-06
+	Epoch Train Duration: 258.94 seconds
+
+	Validation Node RMSE: 9.8790e+02
+	Validation Edge RMSE: 1.4627e+01
+Epoch [172/300]
+	Loss: 7.4073e-06
+	Node Prediction Loss: 1.3251e-06
+	Edge Prediction Loss: 3.5266e-06
+	Global Physics Loss: 3.6647e-09
+	Local Physics Loss: 2.5520e-06
+	Epoch Train Duration: 255.68 seconds
+
+	Validation Node RMSE: 9.9039e+02
+	Validation Edge RMSE: 1.4725e+01
+Training completed due to early stopping.
+Final training Loss: 7.4073e-06
+Average training Loss: 1.4064e-05
+Minimum training Loss: 7.3517e-06
+Maximum training Loss: 1.9384e-04
+Total training time: 29858.6595 seconds
+Saved training stats to: training_stats/MultiScaleDUALFloodGNN_2026-08-29_12-24-19_train_stats.npz
+Saved model to: saved_models/MultiScaleDUALFloodGNN_2026-08-29_12-24-19.pt
+================================================

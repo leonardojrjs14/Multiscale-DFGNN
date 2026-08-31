@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/home/i/i0002673/projects/multiscale_DFGNN/test.py", line 161, in <module>
+    main()
+  File "/home/i/i0002673/projects/multiscale_DFGNN/test.py", line 74, in main
+    config = file_utils.read_yaml_file(args.config)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/i/i0002673/projects/multiscale_DFGNN/utils/file_utils.py", line 12, in read_yaml_file
+    with open(filepath, 'r') as file:
+         ^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: ''

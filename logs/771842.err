@@ -1,0 +1,33 @@
+================================================
+Setting random seed to 42
+Using device: NVIDIA A100-PCIE-40GB
+Using dataset configuration: {'root_dir': '/home/i/i0002673/projects/dual_flood_gnn-master/data/datasets', 'nodes_shp_file': 'GEOMETRY/cell_centers_with_ele.shp', 'edges_shp_file': 'GEOMETRY/links_with_slope.shp', 'dem_file': 'GEOMETRY/DEM.tif', 'features_stats_file': 'features_stats.yaml', 'previous_timesteps': 1, 'normalize': True, 'timestep_interval': 900, 'spin_up_time': 259200, 'time_from_peak': None, 'inflow_boundary_nodes': [1248], 'outflow_boundary_nodes': [1253, 1129], 'mode': 'test', 'dataset_summary_file': 'test.csv', 'event_stats_file': 'test_event_stats.yaml', 'with_global_mass_loss': True, 'with_local_mass_loss': True}
+Processing Flood Event Dataset...
+Saved constant values to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/constant_values.npz
+Saved dynamic values for event 38 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_38.npz
+Saved dynamic values for event 39 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_39.npz
+Saved dynamic values for event 40 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_40.npz
+Saved dynamic values for event 41 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_41.npz
+Saved event stats to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/test_event_stats.yaml
+Saved boundary condition info to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/boundary_condition_masks.npz
+open file: /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/pre_transform.pt
+open file: /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/pre_filter.pt
+Processing timesteps:   0%|          | 0/2296 [00:00<?, ?it/s]Processing timesteps:  19%|█▉        | 442/2296 [00:00<00:00, 4418.59it/s]Processing timesteps:  39%|███▊      | 884/2296 [00:00<00:00, 4158.07it/s]Processing timesteps:  57%|█████▋    | 1301/2296 [00:00<00:00, 4132.00it/s]Processing timesteps:  75%|███████▌  | 1723/2296 [00:00<00:00, 4067.92it/s]Processing timesteps:  93%|█████████▎| 2131/2296 [00:00<00:00, 2608.17it/s]Processing timesteps: 100%|██████████| 2296/2296 [00:00<00:00, 3203.87it/s]
+RAM usage after loading dataset: 1.13 GB
+Loaded dataset with 2296 samples
+Unexpected error:
+Traceback (most recent call last):
+  File "/home/i/i0002673/projects/multiscale_DFGNN/test.py", line 136, in main
+    model.load_state_dict(torch.load(args.model_path, weights_only=True, map_location=args.device))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/i/i0002673/venvs/dual_flood_gpu/lib/python3.12/site-packages/torch/serialization.py", line 1530, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/i/i0002673/venvs/dual_flood_gpu/lib/python3.12/site-packages/torch/serialization.py", line 795, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/i/i0002673/venvs/dual_flood_gpu/lib/python3.12/site-packages/torch/serialization.py", line 776, in __init__
+    super().__init__(open(name, mode))  # noqa: SIM115
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'saved_model/MultiScaleDUALFloodGNN_2026-08-29_12-24-19.pt'
+

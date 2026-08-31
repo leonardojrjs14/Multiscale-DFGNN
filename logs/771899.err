@@ -1,0 +1,113 @@
+================================================
+Setting random seed to 42
+Using device: NVIDIA A100-PCIE-40GB
+Using dataset configuration: {'root_dir': '/home/i/i0002673/projects/dual_flood_gnn-master/data/datasets', 'nodes_shp_file': 'GEOMETRY/cell_centers_with_ele.shp', 'edges_shp_file': 'GEOMETRY/links_with_slope.shp', 'dem_file': 'GEOMETRY/DEM.tif', 'features_stats_file': 'features_stats.yaml', 'previous_timesteps': 1, 'normalize': True, 'timestep_interval': 900, 'spin_up_time': 259200, 'time_from_peak': None, 'inflow_boundary_nodes': [1248], 'outflow_boundary_nodes': [1253, 1129], 'mode': 'test', 'dataset_summary_file': 'test.csv', 'event_stats_file': 'test_event_stats.yaml', 'with_global_mass_loss': True, 'with_local_mass_loss': True}
+Processing Flood Event Dataset...
+Saved constant values to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/constant_values.npz
+Saved dynamic values for event 38 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_38.npz
+Saved dynamic values for event 39 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_39.npz
+Saved dynamic values for event 40 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_40.npz
+Saved dynamic values for event 41 to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/dynamic_values_event_41.npz
+Saved event stats to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/test_event_stats.yaml
+Saved boundary condition info to /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/boundary_condition_masks.npz
+open file: /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/pre_transform.pt
+open file: /home/i/i0002673/projects/dual_flood_gnn-master/data/datasets/processed/pre_filter.pt
+Processing timesteps:   0%|          | 0/2296 [00:00<?, ?it/s]Processing timesteps:  17%|█▋        | 393/2296 [00:00<00:00, 3926.75it/s]Processing timesteps:  35%|███▌      | 808/2296 [00:00<00:00, 4053.64it/s]Processing timesteps:  53%|█████▎    | 1224/2296 [00:00<00:00, 4098.40it/s]Processing timesteps:  73%|███████▎  | 1677/2296 [00:00<00:00, 4267.45it/s]Processing timesteps:  92%|█████████▏| 2104/2296 [00:00<00:00, 2510.83it/s]Processing timesteps: 100%|██████████| 2296/2296 [00:00<00:00, 3109.16it/s]
+RAM usage after loading dataset: 1.13 GB
+Loaded dataset with 2296 samples
+Using model checkpoint for MultiScaleDUALFloodGNN: saved_models/MultiScaleDUALFloodGNN_2026-08-29_12-42-32.pt
+Using model configuration: {'hidden_features': 64, 'num_scales': 3, 'coarsening_factor': 4, 'layers_per_scale': 3, 'activation': 'relu', 'residual': True, 'mlp_layers': 3, 'skip_connections': True, 'encoder_layers': 3, 'encoder_activation': 'relu', 'decoder_layers': 3, 'decoder_activation': 'relu', 'static_node_features': 8, 'dynamic_node_features': 3, 'static_edge_features': 5, 'dynamic_edge_features': 1, 'previous_timesteps': 1, 'device': 'cuda'}
+Using multiscale hierarchy: {'num_scales': 3, 'nodes_per_scale': [1129, 326, 111], 'edges_per_scale': [2473, 1094, 397], 'coarsening_factor': 4}
+Using testing configuration: {'rollout_start': 0, 'rollout_timesteps': None}
+Validating on run 1/4 with Run ID 38
+Average RMSE: 6.5335e+02
+Average MAE: 4.1535e+02
+Average NSE: 9.9370e-01
+Average CSI: 8.9432e-01
+Average RMSE (flooded): 9.6658e+02
+Average MAE (flooded): 7.1247e+02
+Average NSE (flooded): 9.8785e-01
+
+Average Edge RMSE: 7.0855e+00
+Average Edge MAE: 2.8771e+00
+Average Edge NSE: 9.9586e-01
+
+Total Global Mass Conservation Loss: 1.9716e+04
+
+Total Local Mass Conservation Loss: 3.6553e+06
+
+Validation time: 8.31 seconds
+Inference time for one timestep: 0.0145 seconds
+Validating on run 2/4 with Run ID 39
+Average RMSE: 1.1853e+03
+Average MAE: 6.7763e+02
+Average NSE: 9.9412e-01
+Average CSI: 8.8793e-01
+Average RMSE (flooded): 1.6838e+03
+Average MAE (flooded): 1.1455e+03
+Average NSE (flooded): 9.8966e-01
+
+Average Edge RMSE: 1.4669e+01
+Average Edge MAE: 6.0929e+00
+Average Edge NSE: 9.9668e-01
+
+Total Global Mass Conservation Loss: -1.9438e+04
+
+Total Local Mass Conservation Loss: -2.2124e+07
+
+Validation time: 7.92 seconds
+Inference time for one timestep: 0.0138 seconds
+Validating on run 3/4 with Run ID 40
+Average RMSE: 9.8756e+02
+Average MAE: 5.6784e+02
+Average NSE: 9.9641e-01
+Average CSI: 9.2322e-01
+Average RMSE (flooded): 1.4588e+03
+Average MAE (flooded): 1.0529e+03
+Average NSE (flooded): 9.9291e-01
+
+Average Edge RMSE: 1.0890e+01
+Average Edge MAE: 4.3934e+00
+Average Edge NSE: 9.9824e-01
+
+Total Global Mass Conservation Loss: -1.4635e+05
+
+Total Local Mass Conservation Loss: 1.4467e+06
+
+Validation time: 7.93 seconds
+Inference time for one timestep: 0.0138 seconds
+Validating on run 4/4 with Run ID 41
+Average RMSE: 1.1839e+03
+Average MAE: 7.0295e+02
+Average NSE: 9.8696e-01
+Average CSI: 8.3088e-01
+Average RMSE (flooded): 1.7265e+03
+Average MAE (flooded): 1.2162e+03
+Average NSE (flooded): 9.7740e-01
+
+Average Edge RMSE: 1.3576e+01
+Average Edge MAE: 4.9472e+00
+Average Edge NSE: 9.9139e-01
+
+Total Global Mass Conservation Loss: 6.1476e+04
+
+Total Local Mass Conservation Loss: 1.5008e+07
+
+Validation time: 7.95 seconds
+Inference time for one timestep: 0.0138 seconds
+Average NODE METRICS across events:
+	RMSE: 1.0025e+03
+	MAE: 5.9094e+02
+	NSE: 9.9280e-01
+Average EDGE METRICS across events:
+	RMSE: 1.1555e+01
+	MAE: 4.5776e+00
+	NSE: 9.9554e-01
+PHYSICS-BASED METRICS across events:
+	Average Absolute Global Mass Conservation Loss: 6.1745e+04
+	Average Absolute Local Mass Conservation Loss: 1.0558e+07
+Saved metrics to: saved_metrics/MultiScaleDUALFloodGNN_2026-08-29_12-42-32_runid_38_test_metrics.npz
+Saved metrics to: saved_metrics/MultiScaleDUALFloodGNN_2026-08-29_12-42-32_runid_39_test_metrics.npz
+Saved metrics to: saved_metrics/MultiScaleDUALFloodGNN_2026-08-29_12-42-32_runid_40_test_metrics.npz
+Saved metrics to: saved_metrics/MultiScaleDUALFloodGNN_2026-08-29_12-42-32_runid_41_test_metrics.npz
+================================================
