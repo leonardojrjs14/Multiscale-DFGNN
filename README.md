@@ -158,26 +158,6 @@ python test.py \
   --device cuda
 ```
 
-The model logs node and edge counts at every scale when the hierarchy is
-initialized. The initial implementation expects whole copies of the fine graph
-in a PyG batch; Cluster-GCN subgraph sampling is not yet supported. See
-[`docs/multiscale_dual_flood_gnn.md`](docs/multiscale_dual_flood_gnn.md) for the
-design, configuration, validation checks, and limitations.
-
-On Slurm, the dedicated scripts deliberately call `train.py`/`test.py` without
-Cluster-GCN:
-
-```bash
-sbatch run_multiscale_train.sh configs/config.yaml
-
-sbatch run_multiscale_test.sh \
-  saved_models/MultiScaleDUALFloodGNN_<timestamp>.pt \
-  configs/config.yaml
-```
-
-They default to `~/venvs/dual_flood_gpu`. Set `DUAL_FLOOD_VENV` before `sbatch`
-if your environment is stored elsewhere.
-
 ### Entry Points
 
 Below is the exhaustive list of entry points for the application.
