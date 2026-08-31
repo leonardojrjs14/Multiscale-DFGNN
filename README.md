@@ -1,9 +1,51 @@
-# DUALFloodGNN
+### Multiscale DUALFloodGNN
 
-This repository contains the code for "DUALFloodGNN: Physics-informed Graph Neural Networks for Operational Flood Modeling." DUALFloodGNN is a physics-informed flood GNN architecture comprised of three main components: (1) a model that performs shared message passing to predict both node and edge features, (2) a physics-informed loss function that enforces global and local mass conservation between consecutive predictions, and (3) an autoregressive training strategy utilizing dynamic curriculum learning. This paper was accepted at the IJCAI-ECAI 2026 AI4Tech track. Read more about the paper [here](https://arxiv.org/abs/2512.23964).
+This branch also contains `MultiScaleDUALFloodGNN`, a topology-coarsened latent
+fine-to-coarse-to-fine prototype inspired by the mSWE-GNN architecture. It
+keeps the existing HEC-RAS events, fine-scale labels, autoregressive rollout,
+and global/local mass losses. The additional graph levels are internal latent
+representations, not explicit conservative hydraulic states.
 
+![DUALFloodGNN Overview](/docs/MULTISCALE-DFGNN.png)
 
-![DUALFloodGNN Overview](/docs/overview.png)
+With the default `num_scales: 3`, the original processed graph is the fine
+scale and one connectivity-preserving coarse graph is constructed from it:
+
+```text
+Fine NodeEdgeConv
+→ mean-pool node and crossing-edge latents
+→ Coarse NodeEdgeConv
+→ learned upsampling + fine skip connection
+→ Fine NodeEdgeConv
+→ fine node-volume and signed edge-flow differences
+```
+
+Train and test it with the same dataset and configuration files:
+
+```bash
+python train.py --config configs/config.yaml --model MultiScaleDUALFloodGNN --device cuda
+
+python test.py \
+  --config configs/config.yaml \
+  --model MultiScaleDUALFloodGNN \
+  --model_path saved_models/MultiScaleDUALFloodGNN_<timestamp>.pt \
+  --device cuda
+```
+
+### Entry Points
+
+Below is the exhaustive list of entry points for the application.
+
+| File | Description | Arguments |
+|---|---|---|
+| `train.py` | Train the model with the parameters specified in the config file. | `--config`, `--model`, `--with_test` `--seed` `--device` `--debug` |
+| `test.py` | Perform inference using the specified model checkpoint with test data. | `--config`, `--model`, `--model_path`, `--seed`, `--device`, `--debug` |
+| `hp_search.py` | Perform a Bayesian hyperparameter search with the specified hyperparameters and events. (WARNING: not fully tested.) | `--config`, `--hparam_config`, `--model`, `--seed`, `--device` |
+| `eda.ipynb` | Jupyter notebook that gives an overview and analysis of the data. | N/A |
+| `view_results.ipynb` | Jupyter notebook where you may view the results of model training and testing. | N/A |
+
+Notes
+- .sh files are mainly used for running programs in the slurm cluster.
 
 ## Setup
 
@@ -125,55 +167,6 @@ Similarly, to run the testing code, use the following command:
 python test.py --config 'configs/config.yaml' --model 'DUALFloodGNN' --model_path 'path/to/model_checkpoint.pt'
 ```
 **IMPORANT**: Make sure train before running tests, as the testing code requires a trained model checkpoint and a processed dataset to perform inference.
-
-### Multiscale DUALFloodGNN
-
-This branch also contains `MultiScaleDUALFloodGNN`, a topology-coarsened latent
-fine-to-coarse-to-fine prototype inspired by the mSWE-GNN architecture. It
-keeps the existing HEC-RAS events, fine-scale labels, autoregressive rollout,
-and global/local mass losses. The additional graph levels are internal latent
-representations, not explicit conservative hydraulic states.
-
-![DUALFloodGNN Overview](/docs/MULTISCALE-DFGNN.png)
-
-With the default `num_scales: 3`, the original processed graph is the fine
-scale and one connectivity-preserving coarse graph is constructed from it:
-
-```text
-Fine NodeEdgeConv
-→ mean-pool node and crossing-edge latents
-→ Coarse NodeEdgeConv
-→ learned upsampling + fine skip connection
-→ Fine NodeEdgeConv
-→ fine node-volume and signed edge-flow differences
-```
-
-Train and test it with the same dataset and configuration files:
-
-```bash
-python train.py --config configs/config.yaml --model MultiScaleDUALFloodGNN --device cuda
-
-python test.py \
-  --config configs/config.yaml \
-  --model MultiScaleDUALFloodGNN \
-  --model_path saved_models/MultiScaleDUALFloodGNN_<timestamp>.pt \
-  --device cuda
-```
-
-### Entry Points
-
-Below is the exhaustive list of entry points for the application.
-
-| File | Description | Arguments |
-|---|---|---|
-| `train.py` | Train the model with the parameters specified in the config file. | `--config`, `--model`, `--with_test` `--seed` `--device` `--debug` |
-| `test.py` | Perform inference using the specified model checkpoint with test data. | `--config`, `--model`, `--model_path`, `--seed`, `--device`, `--debug` |
-| `hp_search.py` | Perform a Bayesian hyperparameter search with the specified hyperparameters and events. (WARNING: not fully tested.) | `--config`, `--hparam_config`, `--model`, `--seed`, `--device` |
-| `eda.ipynb` | Jupyter notebook that gives an overview and analysis of the data. | N/A |
-| `view_results.ipynb` | Jupyter notebook where you may view the results of model training and testing. | N/A |
-
-Notes
-- .sh files are mainly used for running programs in the slurm cluster.
 
 ## Code Structure
 
