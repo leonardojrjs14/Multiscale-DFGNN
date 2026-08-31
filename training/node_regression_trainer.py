@@ -1,0 +1,103 @@
+import os
+import numpy as np
+
+from contextlib import redirect_stdout
+from data import FloodEventDataset
+from torch import Tensor
+from testing import NodeAutoregressiveTester
+from utils import physics_utils, train_utils
+
+from .physics_informed_trainer import PhysicsInformedTrainer
+
+class NodeRegressionTrainer(PhysicsInformedTrainer):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        ds: FloodEventDataset = self.dataloader.dataset
+        self.boundary_nodes_mask = ds.boundary_condition.boundary_nodes_mask
+
+    def train(self):
+        self.training_stats.start_train()
+        for epoch in range(self.num_epochs):
+            self.model.train()
+
+            running_pred_loss = 0.0
+            running_global_mass_loss = 0.0
+            running_local_mass_loss = 0.0
+
+            for batch in self.dataloader:
+                self.optimizer.zero_grad()
+
+                batch = batch.to(self.device)
+                x, edge_index, edge_attr = batch.x, batch.edge_index, batch.edge_attr
+                pred_diff = self.model(x, edge_index, edge_attr)
+                pred_diff = self._override_pred_bc(pred_diff, batch)
+
+                loss = self._compute_node_loss(pred_diff, batch)
+                loss = self._scale_node_pred_loss(epoch, loss)
+                running_pred_loss += loss.item()
+
+                if self.use_physics_loss:
+                    previous_timesteps = self.dataloader.dataset.previous_timesteps
+                    curr_water_volume, curr_face_flow = physics_utils.get_physics_info_node_edge(x, edge_attr, previous_timesteps, batch)
+                    pred = curr_water_volume + pred_diff
+                    global_loss, local_loss = self._get_physics_loss(epoch, pred, curr_water_volume,
+                                                                     curr_face_flow, loss, batch)
+                    running_global_mass_loss += global_loss.item()
+                    running_local_mass_loss += local_loss.item()
+                    loss = loss + global_loss + local_loss
+
+                loss.backward()
+                self.optimizer.step()
+
+            running_loss = running_pred_loss + running_global_mass_loss + running_local_mass_loss
+            running_losses = (running_loss, running_pred_loss, running_global_mass_loss, running_local_mass_loss)
+            epoch_losses = train_utils.divide_losses(running_losses, len(self.dataloader))
+            epoch_loss, pred_epoch_loss, global_mass_epoch_loss, local_mass_epoch_loss = epoch_losses
+
+            logging_str = f'Epoch [{epoch + 1}/{self.num_epochs}]\n'
+            logging_str += f'\tTotal Loss: {epoch_loss:.4e}\n'
+            logging_str += f'\tNode Prediction Loss: {pred_epoch_loss:.4e}'
+            self.training_stats.log(logging_str)
+
+            self.training_stats.add_loss(epoch_loss)
+            self.training_stats.add_loss_component('prediction_loss', pred_epoch_loss)
+
+            if self.use_physics_loss:
+                self._log_epoch_physics_loss(global_mass_epoch_loss, local_mass_epoch_loss)
+
+            self._update_loss_scaler_for_epoch(epoch)
+
+            if hasattr(self, 'early_stopping'):
+                val_node_rmse = self.validate()
+                self.training_stats.log(f'\n\tValidation Node RMSE: {val_node_rmse:.4e}')
+                self.training_stats.add_val_loss_component('val_node_rmse', val_node_rmse)
+
+                if self.early_stopping(val_node_rmse, self.model):
+                    self.training_stats.log(f'Early stopping triggered at epoch {epoch + 1}.')
+                    break
+
+        self.training_stats.end_train()
+        self._add_scaled_physics_loss_history()
+
+    def validate(self):
+        val_tester = NodeAutoregressiveTester(
+            model=self.model,
+            dataset=self.val_dataset,
+            include_physics_loss=False,
+            device=self.device
+        )
+        with open(os.devnull, "w") as f, redirect_stdout(f):
+            val_tester.test()
+
+        node_rmse = val_tester.get_avg_node_rmse()
+        return node_rmse
+
+    def _compute_node_loss(self, pred: Tensor, batch) -> Tensor:
+        label = batch.y
+        return self.loss_func(pred, label)
+
+    def _override_pred_bc(self, pred: Tensor, batch) -> Tensor:
+        batch_boundary_nodes_mask = np.tile(self.boundary_nodes_mask, batch.num_graphs)
+        pred[batch_boundary_nodes_mask] = batch.y[batch_boundary_nodes_mask]
+        return pred
