@@ -1,0 +1,24 @@
+output_dir: 'hp_stats'
+num_trials: 20
+num_folds: 5
+hyperparameters:
+  hidden_features:
+    path: 'model_parameters.MultiScaleDUALFloodGNN.hidden_features'
+    type: 'categorical'
+    choices: [32, 64, 128]
+  num_scales:
+    path: 'model_parameters.MultiScaleDUALFloodGNN.num_scales'
+    type: 'categorical'
+    choices: [2, 3]
+  coarsening_factor:
+    path: 'model_parameters.MultiScaleDUALFloodGNN.coarsening_factor'
+    type: 'categorical'
+    choices: [2, 4, 8]
+  layers_per_scale:
+    path: 'model_parameters.MultiScaleDUALFloodGNN.layers_per_scale'
+    type: 'categorical'
+    choices: [1, 2]
+  mlp_layers:
+    path: 'model_parameters.MultiScaleDUALFloodGNN.mlp_layers'
+    type: 'categorical'
+    choices: [2, 3]

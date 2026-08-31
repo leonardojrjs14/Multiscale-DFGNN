@@ -1,0 +1,10 @@
+output_dir: 'hp_stats'
+num_trials: 20
+num_folds: 5
+hyperparameters:
+  edge_loss_weight:
+    path: 'loss_func_parameters.edge_loss_weight'
+    type: 'float'
+    min: 0.1
+    max: 2.0
+    log: True
